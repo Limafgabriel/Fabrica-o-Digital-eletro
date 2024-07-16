@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Máquinas CNC | Fabricação Digital</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Máquinas CNC | Fabricação Digital" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Máquinas CNC | Fabricação Digital" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Gabriel Lima Ferreira" />
+
+
+<meta name="date" content="2024-07-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="impressão-3d.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introdução</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#objetivos-da-disciplina"><i class="fa fa-check"></i><b>1.1</b> Objetivos da Disciplina</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#conteúdo-programático"><i class="fa fa-check"></i><b>1.2</b> Conteúdo Programático</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#importância-da-fabricação-digital"><i class="fa fa-check"></i><b>1.3</b> Importância da Fabricação Digital</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html"><i class="fa fa-check"></i><b>2</b> Máquinas CNC</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#origens"><i class="fa fa-check"></i><b>2.1</b> Origens</a></li>
+<li class="chapter" data-level="2.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#terminologias"><i class="fa fa-check"></i><b>2.2</b> Terminologias</a></li>
+<li class="chapter" data-level="2.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#configurações-de-máquina"><i class="fa fa-check"></i><b>2.3</b> Configurações de Máquina</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#operação"><i class="fa fa-check"></i><b>2.3.1</b> Operação</a></li>
+<li class="chapter" data-level="2.3.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#estrutura"><i class="fa fa-check"></i><b>2.3.2</b> Estrutura</a></li>
+<li class="chapter" data-level="2.3.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#guias-e-suportes"><i class="fa fa-check"></i><b>2.3.3</b> Guias e Suportes</a></li>
+<li class="chapter" data-level="2.3.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#motores"><i class="fa fa-check"></i><b>2.3.4</b> Motores</a></li>
+<li class="chapter" data-level="2.3.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#acopladores"><i class="fa fa-check"></i><b>2.3.5</b> Acopladores</a></li>
+<li class="chapter" data-level="2.3.6" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#transmissão"><i class="fa fa-check"></i><b>2.3.6</b> Transmissão</a></li>
+<li class="chapter" data-level="2.3.7" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#eletrônica"><i class="fa fa-check"></i><b>2.3.7</b> Eletrônica</a></li>
+<li class="chapter" data-level="2.3.8" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#software"><i class="fa fa-check"></i><b>2.3.8</b> Software</a></li>
+<li class="chapter" data-level="2.3.9" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#ferramenta"><i class="fa fa-check"></i><b>2.3.9</b> Ferramenta</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#segurança"><i class="fa fa-check"></i><b>2.4</b> Segurança</a></li>
+<li class="chapter" data-level="2.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#fluxo-de-trabalho"><i class="fa fa-check"></i><b>2.5</b> Fluxo de Trabalho</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="impressão-3d.html"><a href="impressão-3d.html"><i class="fa fa-check"></i><b>3</b> Impressão 3D</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="impressão-3d.html"><a href="impressão-3d.html#o-que-é-impressora-3d"><i class="fa fa-check"></i><b>3.1</b> O Que é Impressora 3D</a></li>
+<li class="chapter" data-level="3.2" data-path="impressão-3d.html"><a href="impressão-3d.html#como-funciona-a-impressora-3d"><i class="fa fa-check"></i><b>3.2</b> Como Funciona a Impressora 3D</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="impressão-3d.html"><a href="impressão-3d.html#estrutura-e-componentes"><i class="fa fa-check"></i><b>3.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="impressão-3d.html"><a href="impressão-3d.html#experiência-prática-projeto-do-dragão-de-game-of-thrones"><i class="fa fa-check"></i><b>3.3</b> Experiência Prática: Projeto do Dragão de Game of Thrones</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="impressão-3d.html"><a href="impressão-3d.html#buscando-o-projeto"><i class="fa fa-check"></i><b>3.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="3.3.2" data-path="impressão-3d.html"><a href="impressão-3d.html#preparação-do-arquivo"><i class="fa fa-check"></i><b>3.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="3.3.3" data-path="impressão-3d.html"><a href="impressão-3d.html#processo-de-impressão"><i class="fa fa-check"></i><b>3.3.3</b> Processo de Impressão</a></li>
+<li class="chapter" data-level="3.3.4" data-path="impressão-3d.html"><a href="impressão-3d.html#resultado-final"><i class="fa fa-check"></i><b>3.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="3.3.5" data-path="impressão-3d.html"><a href="impressão-3d.html#reflexão-sobre-o-processo"><i class="fa fa-check"></i><b>3.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html"><i class="fa fa-check"></i><b>4</b> Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#o-que-é-uma-máquina-a-laser"><i class="fa fa-check"></i><b>4.1</b> O Que é uma Máquina a Laser</a></li>
+<li class="chapter" data-level="4.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#como-funciona-a-máquina-a-laser"><i class="fa fa-check"></i><b>4.2</b> Como Funciona a Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#estrutura-e-componentes-1"><i class="fa fa-check"></i><b>4.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#experiência-prática-projeto-da-caixa"><i class="fa fa-check"></i><b>4.3</b> Experiência Prática: Projeto da Caixa</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#buscando-o-projeto-1"><i class="fa fa-check"></i><b>4.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="4.3.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#preparação-do-arquivo-1"><i class="fa fa-check"></i><b>4.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="4.3.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#processo-de-corte"><i class="fa fa-check"></i><b>4.3.3</b> Processo de Corte</a></li>
+<li class="chapter" data-level="4.3.4" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#montagem-da-caixa"><i class="fa fa-check"></i><b>4.3.4</b> Montagem da Caixa</a></li>
+<li class="chapter" data-level="4.3.5" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#resultado-final-1"><i class="fa fa-check"></i><b>4.3.5</b> Resultado Final</a></li>
+<li class="chapter" data-level="4.3.6" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#reflexão-sobre-o-processo-1"><i class="fa fa-check"></i><b>4.3.6</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="plotter.html"><a href="plotter.html"><i class="fa fa-check"></i><b>5</b> Plotter</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="plotter.html"><a href="plotter.html#o-que-é-uma-plotter"><i class="fa fa-check"></i><b>5.1</b> O Que é uma Plotter</a></li>
+<li class="chapter" data-level="5.2" data-path="plotter.html"><a href="plotter.html#como-funciona-a-plotter"><i class="fa fa-check"></i><b>5.2</b> Como Funciona a Plotter</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="plotter.html"><a href="plotter.html#estrutura-e-componentes-2"><i class="fa fa-check"></i><b>5.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="plotter.html"><a href="plotter.html#experiência-prática-projeto-do-símbolo-targaryen"><i class="fa fa-check"></i><b>5.3</b> Experiência Prática: Projeto do Símbolo Targaryen</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="plotter.html"><a href="plotter.html#recebendo-as-instruções"><i class="fa fa-check"></i><b>5.3.1</b> Recebendo as Instruções</a></li>
+<li class="chapter" data-level="5.3.2" data-path="plotter.html"><a href="plotter.html#escolhendo-e-preparando-o-desenho"><i class="fa fa-check"></i><b>5.3.2</b> Escolhendo e Preparando o Desenho</a></li>
+<li class="chapter" data-level="5.3.3" data-path="plotter.html"><a href="plotter.html#processo-de-desenho"><i class="fa fa-check"></i><b>5.3.3</b> Processo de Desenho</a></li>
+<li class="chapter" data-level="5.3.4" data-path="plotter.html"><a href="plotter.html#resultado-final-2"><i class="fa fa-check"></i><b>5.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="5.3.5" data-path="plotter.html"><a href="plotter.html#reflexão-sobre-o-processo-2"><i class="fa fa-check"></i><b>5.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="arduino.html"><a href="arduino.html"><i class="fa fa-check"></i><b>6</b> Arduino</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="arduino.html"><a href="arduino.html#o-que-é-o-arduino"><i class="fa fa-check"></i><b>6.1</b> O Que é o Arduino</a></li>
+<li class="chapter" data-level="6.2" data-path="arduino.html"><a href="arduino.html#para-que-serve-o-arduino"><i class="fa fa-check"></i><b>6.2</b> Para Que Serve o Arduino</a></li>
+<li class="chapter" data-level="6.3" data-path="arduino.html"><a href="arduino.html#programação-no-arduino"><i class="fa fa-check"></i><b>6.3</b> Programação no Arduino</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="arduino.html"><a href="arduino.html#estrutura-básica-de-um-programa-arduino"><i class="fa fa-check"></i><b>6.3.1</b> Estrutura Básica de um Programa Arduino</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="arduino.html"><a href="arduino.html#tipos-de-arduino"><i class="fa fa-check"></i><b>6.4</b> Tipos de Arduino</a></li>
+<li class="chapter" data-level="6.5" data-path="arduino.html"><a href="arduino.html#bancada-de-sistema-de-controle"><i class="fa fa-check"></i><b>6.5</b> Bancada de Sistema de Controle</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="arduino.html"><a href="arduino.html#apresentação-da-bancada"><i class="fa fa-check"></i><b>6.5.1</b> Apresentação da Bancada</a></li>
+<li class="chapter" data-level="6.5.2" data-path="arduino.html"><a href="arduino.html#explicação-da-bancada"><i class="fa fa-check"></i><b>6.5.2</b> Explicação da Bancada</a></li>
+<li class="chapter" data-level="6.5.3" data-path="arduino.html"><a href="arduino.html#foto-da-bancada"><i class="fa fa-check"></i><b>6.5.3</b> Foto da Bancada</a></li>
+<li class="chapter" data-level="6.5.4" data-path="arduino.html"><a href="arduino.html#reflexão-sobre-o-processo-3"><i class="fa fa-check"></i><b>6.5.4</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html"><i class="fa fa-check"></i><b>7</b> Processo de Corrosão</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#o-que-é-a-corrosão"><i class="fa fa-check"></i><b>7.1</b> O Que é a Corrosão</a></li>
+<li class="chapter" data-level="7.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#como-funciona-a-corrosão"><i class="fa fa-check"></i><b>7.2</b> Como Funciona a Corrosão</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#materiais-e-ferramentas"><i class="fa fa-check"></i><b>7.2.1</b> Materiais e Ferramentas</a></li>
+<li class="chapter" data-level="7.2.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#monitoramento-e-ajustes"><i class="fa fa-check"></i><b>7.2.2</b> Monitoramento e Ajustes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#experiência-prática-fabricação-de-um-circuito"><i class="fa fa-check"></i><b>7.3</b> Experiência Prática: Fabricação de um Circuito</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#recebendo-as-instruções-1"><i class="fa fa-check"></i><b>7.3.1</b> Recebendo as Instruções</a></li>
+<li class="chapter" data-level="7.3.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#aplicando-a-máscara-e-realizando-a-corrosão"><i class="fa fa-check"></i><b>7.3.2</b> Aplicando a Máscara e Realizando a Corrosão</a></li>
+<li class="chapter" data-level="7.3.3" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#resultado-final-3"><i class="fa fa-check"></i><b>7.3.3</b> Resultado Final</a></li>
+<li class="chapter" data-level="7.3.4" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#reflexão-sobre-o-processo-4"><i class="fa fa-check"></i><b>7.3.4</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="soldagem.html"><a href="soldagem.html"><i class="fa fa-check"></i><b>8</b> Soldagem</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="soldagem.html"><a href="soldagem.html#o-processo-de-soldagem"><i class="fa fa-check"></i><b>8.1</b> O Processo de Soldagem</a></li>
+<li class="chapter" data-level="8.2" data-path="soldagem.html"><a href="soldagem.html#o-material-estanho"><i class="fa fa-check"></i><b>8.2</b> O Material: Estanho</a></li>
+<li class="chapter" data-level="8.3" data-path="soldagem.html"><a href="soldagem.html#a-estação-de-solda"><i class="fa fa-check"></i><b>8.3</b> A Estação de Solda</a></li>
+<li class="chapter" data-level="8.4" data-path="soldagem.html"><a href="soldagem.html#a-prática-de-soldagem"><i class="fa fa-check"></i><b>8.4</b> A Prática de Soldagem</a></li>
+<li class="chapter" data-level="8.5" data-path="soldagem.html"><a href="soldagem.html#reflexão-sobre-o-processo-5"><i class="fa fa-check"></i><b>8.5</b> 8.5 Reflexão Sobre o Processo</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="transmissor-am.html"><a href="transmissor-am.html"><i class="fa fa-check"></i><b>9</b> Transmissor AM</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="transmissor-am.html"><a href="transmissor-am.html#o-que-é-um-transmissor-am"><i class="fa fa-check"></i><b>9.1</b> O que é um Transmissor AM</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="transmissor-am.html"><a href="transmissor-am.html#princípios-de-funcionamento"><i class="fa fa-check"></i><b>9.1.1</b> Princípios de Funcionamento</a></li>
+<li class="chapter" data-level="9.1.2" data-path="transmissor-am.html"><a href="transmissor-am.html#vantagens-e-desvantagens"><i class="fa fa-check"></i><b>9.1.2</b> Vantagens e Desvantagens</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="transmissor-am.html"><a href="transmissor-am.html#descrição-do-projeto"><i class="fa fa-check"></i><b>9.2</b> Descrição do Projeto</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="transmissor-am.html"><a href="transmissor-am.html#componentes-e-materiais"><i class="fa fa-check"></i><b>9.2.1</b> Componentes e Materiais</a></li>
+<li class="chapter" data-level="9.2.2" data-path="transmissor-am.html"><a href="transmissor-am.html#objetivo-do-projeto"><i class="fa fa-check"></i><b>9.2.2</b> Objetivo do Projeto</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="transmissor-am.html"><a href="transmissor-am.html#cálculos-e-simulação"><i class="fa fa-check"></i><b>9.3</b> Cálculos e Simulação</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="transmissor-am.html"><a href="transmissor-am.html#cálculos-teóricos"><i class="fa fa-check"></i><b>9.3.1</b> Cálculos Teóricos</a></li>
+<li class="chapter" data-level="9.3.2" data-path="transmissor-am.html"><a href="transmissor-am.html#simulação-no-ltspice"><i class="fa fa-check"></i><b>9.3.2</b> Simulação no LTSpice</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="transmissor-am.html"><a href="transmissor-am.html#montagem-e-teste-em-protoboard"><i class="fa fa-check"></i><b>9.4</b> Montagem e Teste em Protoboard</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="transmissor-am.html"><a href="transmissor-am.html#montagem-na-protoboard"><i class="fa fa-check"></i><b>9.4.1</b> Montagem na Protoboard</a></li>
+<li class="chapter" data-level="9.4.2" data-path="transmissor-am.html"><a href="transmissor-am.html#testes-com-osciloscópio"><i class="fa fa-check"></i><b>9.4.2</b> Testes com Osciloscópio</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="transmissor-am.html"><a href="transmissor-am.html#produção-do-circuito-impresso"><i class="fa fa-check"></i><b>9.5</b> Produção do Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-carregar-o-arquivo-no-candle"><i class="fa fa-check"></i><b>9.5.1</b> 1º Passo: Carregar o Arquivo no Candle</a></li>
+<li class="chapter" data-level="9.5.2" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-medição-de-desnível-da-placa"><i class="fa fa-check"></i><b>9.5.2</b> 2º Passo: Medição de Desnível da Placa</a></li>
+<li class="chapter" data-level="9.5.3" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-fresagem-das-trilhas"><i class="fa fa-check"></i><b>9.5.3</b> 3º Passo: Fresagem das Trilhas</a></li>
+<li class="chapter" data-level="9.5.4" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-produção-dos-furos"><i class="fa fa-check"></i><b>9.5.4</b> 4º Passo: Produção dos Furos</a></li>
+<li class="chapter" data-level="9.5.5" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-criação"><i class="fa fa-check"></i><b>9.5.5</b> 5º Passo: Criação</a></li>
+<li class="chapter" data-level="9.5.6" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-limpar-a-placa"><i class="fa fa-check"></i><b>9.5.6</b> 6º Passo: Limpar a placa</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="transmissor-am.html"><a href="transmissor-am.html#resultado-final-4"><i class="fa fa-check"></i><b>9.6</b> Resultado Final</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="transmissor-am.html"><a href="transmissor-am.html#foto-do-circuito-finalizado"><i class="fa fa-check"></i><b>9.6.1</b> Foto do Circuito Finalizado</a></li>
+<li class="chapter" data-level="9.6.2" data-path="transmissor-am.html"><a href="transmissor-am.html#visualização-do-sinal-no-osciloscópio"><i class="fa fa-check"></i><b>9.6.2</b> Visualização do Sinal no Osciloscópio</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="transmissor-am.html"><a href="transmissor-am.html#impacto-no-desenvolvimento-profissional"><i class="fa fa-check"></i><b>9.7</b> Impacto no Desenvolvimento Profissional</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fabricação Digital</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="máquinas-cnc" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Máquinas CNC<a href="máquinas-cnc.html#máquinas-cnc" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>O cerne da fabricação digital é a tecnologia de controle numérico (CNC). Todas as máquinas que iremos utilizar durante o curso utilizam essa tecnologia, mudando apenas alguns detalhes entre um equipamento e outro. Portanto, faz sentido falar de uma forma geral das características comuns delas antes da parte prática.</p>
+<div id="origens" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Origens<a href="máquinas-cnc.html#origens" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>As máquinas CNC têm suas origens na necessidade de automação dos processos de fabricação. O conceito de controle numérico foi desenvolvido na década de 1940 e 1950, impulsionado pelo desejo de melhorar a precisão e eficiência na produção de peças complexas. O desenvolvimento inicial das máquinas CNC foi influenciado por várias fontes, incluindo a indústria aeroespacial, que necessitava de peças com tolerâncias rigorosas.</p>
+</div>
+<div id="terminologias" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Terminologias<a href="máquinas-cnc.html#terminologias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Para compreender melhor as máquinas CNC e a fabricação digital, é importante familiarizar-se com algumas terminologias essenciais:</p>
+<ul>
+<li><strong>Fabricação</strong>: Processo de criar produtos a partir de matérias-primas.</li>
+<li><strong>Manufatura</strong>: Produção em larga escala de produtos acabados a partir de matérias-primas.</li>
+<li><strong>Aditiva</strong>: Técnica de fabricação onde o material é adicionado camada por camada para criar um objeto.</li>
+<li><strong>Subtrativa</strong>: Técnica de fabricação onde o material é removido de um bloco maior para criar a forma desejada.</li>
+<li><strong>Digital</strong>: Relacionado a sistemas ou processos que utilizam dados digitais.</li>
+<li><strong>Fabricação digital</strong>: Utilização de tecnologias digitais para controlar processos de fabricação.</li>
+<li><strong>CNC (Computer Numerical Control)</strong>: Controle numérico computadorizado, que permite a automação de máquinas através de comandos programados.</li>
+<li><strong>CAD (Computer Aided Design)</strong>: Desenho auxiliado por computador, referindo-se a software que permite criar projetos de peças e produtos.</li>
+<li><strong>CAM (Computer Aided Manufacture)</strong>: Fabricação auxiliada por computador.</li>
+<li><strong>Router</strong>: Tipo de máquina CNC utilizada principalmente para cortar, perfurar ou fresar materiais como madeira, plástico e metais leves.</li>
+</ul>
+</div>
+<div id="configurações-de-máquina" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Configurações de Máquina<a href="máquinas-cnc.html#configurações-de-máquina" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="operação" class="section level3 hasAnchor" number="2.3.1">
+<h3><span class="header-section-number">2.3.1</span> Operação<a href="máquinas-cnc.html#operação" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As máquinas CNC podem operar de diferentes maneiras, dependendo de sua configuração:</p>
+<ul>
+<li><strong>Cartesiana</strong>: Utiliza coordenadas X, Y e Z para posicionar a ferramenta.</li>
+<li><strong>Rotacional</strong>: Inclui eixos rotativos que permitem a usinagem de peças cilíndricas ou complexas.</li>
+<li><strong>Cinco eixos</strong>: Centrais de usinagem que permitem a movimentação em cinco eixos diferentes, proporcionando maior flexibilidade e complexidade na fabricação.</li>
+</ul>
+</div>
+<div id="estrutura" class="section level3 hasAnchor" number="2.3.2">
+<h3><span class="header-section-number">2.3.2</span> Estrutura<a href="máquinas-cnc.html#estrutura" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A estrutura das máquinas CNC geralmente inclui:</p>
+<ul>
+<li><strong>Base</strong>: Suporte principal da máquina.</li>
+<li><strong>Pórtico</strong>: Pode ser fixo ou móvel, suporta a ferramenta de usinagem.</li>
+<li><strong>Mesa</strong>: Superfície onde o material é colocado para usinagem.</li>
+<li><strong>Eixos</strong>: Direcionam o movimento da ferramenta e do material.</li>
+</ul>
+</div>
+<div id="guias-e-suportes" class="section level3 hasAnchor" number="2.3.3">
+<h3><span class="header-section-number">2.3.3</span> Guias e Suportes<a href="máquinas-cnc.html#guias-e-suportes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Guia</strong>: Direciona o movimento ao longo dos eixos.</li>
+<li><strong>Cilíndrica</strong>: Movimento em torno de um eixo cilíndrico.</li>
+<li><strong>Retangular</strong>: Movimento linear ao longo de eixos retangulares.</li>
+<li><strong>Suporte de guia</strong>: Mantém as guias em posição.</li>
+<li><strong>Pillow block e rolamentos lineares</strong>: Suportes para eixos rotativos.</li>
+<li><strong>Patins</strong>: Componentes que deslizam ao longo das guias.</li>
+</ul>
+</div>
+<div id="motores" class="section level3 hasAnchor" number="2.3.4">
+<h3><span class="header-section-number">2.3.4</span> Motores<a href="máquinas-cnc.html#motores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Passos</strong>: Motores que movimentam em pequenos incrementos.</li>
+<li><strong>DC/Servo</strong>: Motores de corrente contínua/servomotores.</li>
+<li><strong>AC</strong>: Motores de corrente alternada.</li>
+</ul>
+</div>
+<div id="acopladores" class="section level3 hasAnchor" number="2.3.5">
+<h3><span class="header-section-number">2.3.5</span> Acopladores<a href="máquinas-cnc.html#acopladores" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Flexível</strong>: Permite flexibilidade entre os componentes conectados.</li>
+<li><strong>“Mandíbula”</strong>: Acoplador que usa dentes para conexão.</li>
+</ul>
+</div>
+<div id="transmissão" class="section level3 hasAnchor" number="2.3.6">
+<h3><span class="header-section-number">2.3.6</span> Transmissão<a href="máquinas-cnc.html#transmissão" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Correia</strong>: Transmissão de movimento através de correias.</li>
+<li><strong>Polia lisa e dentada</strong>: Utilizadas para guiar as correias.</li>
+<li><strong>Core XY</strong>: Sistema de movimento que utiliza duas correias em eixos diferentes.</li>
+<li><strong>Fuso</strong>: Componente roscado que converte movimento rotacional em linear.</li>
+<li><strong>Castanha, mancal, suporte e rolamentos</strong>: Componentes que suportam e guiam o fuso.</li>
+</ul>
+</div>
+<div id="eletrônica" class="section level3 hasAnchor" number="2.3.7">
+<h3><span class="header-section-number">2.3.7</span> Eletrônica<a href="máquinas-cnc.html#eletrônica" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Placa de controle</strong>: Gerencia os comandos para os motores e outras partes da máquina.</li>
+<li><strong>Drivers de motor</strong>: Controlam a potência fornecida aos motores.</li>
+<li><strong>Alimentação</strong>: Fonte de energia para os componentes eletrônicos.</li>
+<li><strong>Acionamento e controle de potência</strong>: Regula a energia que alimenta os motores e outros componentes.</li>
+</ul>
+</div>
+<div id="software" class="section level3 hasAnchor" number="2.3.8">
+<h3><span class="header-section-number">2.3.8</span> Software<a href="máquinas-cnc.html#software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Firmware</strong>: Software embarcado que controla o hardware da máquina.</li>
+<li><strong>GRBL</strong>: Firmware popular para controle de máquinas CNC.</li>
+<li><strong>G-Code</strong>: Linguagem de programação utilizada para controlar máquinas CNC.</li>
+<li><strong>Controle</strong>: Softwares que permitem o controle das máquinas, como Candle, Mach 3 e Linux CNC.</li>
+</ul>
+</div>
+<div id="ferramenta" class="section level3 hasAnchor" number="2.3.9">
+<h3><span class="header-section-number">2.3.9</span> Ferramenta<a href="máquinas-cnc.html#ferramenta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li><strong>Usinagem</strong>: Ferramentas como spindle, fresas e brocas.</li>
+<li><strong>Impressão</strong>: Materiais como filamento, resina, metal, concreto, argila e orgânicos.</li>
+<li><strong>Laser</strong>: Tecnologias de corte e gravação a laser, incluindo CO2, fibra e diodo.</li>
+<li><strong>Costura, Corte Vinil, Soldagem, Injeção</strong>: Outras aplicações específicas.</li>
+</ul>
+</div>
+</div>
+<div id="segurança" class="section level2 hasAnchor" number="2.4">
+<h2><span class="header-section-number">2.4</span> Segurança<a href="máquinas-cnc.html#segurança" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A segurança é um aspecto crucial ao operar máquinas CNC. Alguns dos equipamentos de segurança recomendados incluem:</p>
+<ul>
+<li><strong>Óculos</strong>: Proteção para os olhos contra detritos e faíscas.</li>
+<li><strong>Luvas</strong>: Proteção para as mãos contra cortes e abrasões.</li>
+<li><strong>Máscaras</strong>: Proteção contra inalação de poeiras e fumos.</li>
+<li><strong>Vestimenta</strong>: Roupas adequadas para proteção contra riscos específicos.</li>
+</ul>
+</div>
+<div id="fluxo-de-trabalho" class="section level2 hasAnchor" number="2.5">
+<h2><span class="header-section-number">2.5</span> Fluxo de Trabalho<a href="máquinas-cnc.html#fluxo-de-trabalho" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>O fluxo de trabalho em um ambiente de fabricação digital normalmente segue estas etapas:</p>
+<ul>
+<li><strong>CAD (Computer Aided Design)</strong>: Criação do projeto digital utilizando software de design.</li>
+<li><strong>CAM (Computer Aided Manufacture)</strong>: Preparação do projeto para fabricação, incluindo a geração de G-Code.</li>
+<li><strong>Fabricação</strong>: Execução do processo de fabricação utilizando a máquina CNC.</li>
+</ul>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="impressão-3d.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-maqui.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

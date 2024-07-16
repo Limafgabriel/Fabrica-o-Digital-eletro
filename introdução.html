@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Introdução | Fabricação Digital</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Introdução | Fabricação Digital" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Introdução | Fabricação Digital" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Gabriel Lima Ferreira" />
+
+
+<meta name="date" content="2024-07-08" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="máquinas-cnc.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like https://bookdown.org/yihui/bookdown</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#objetivos-da-disciplina"><i class="fa fa-check"></i><b>1.1</b> Objetivos da Disciplina</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#conteúdo-programático"><i class="fa fa-check"></i><b>1.2</b> Conteúdo Programático</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#importância-da-fabricação-digital"><i class="fa fa-check"></i><b>1.3</b> Importância da Fabricação Digital</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introdução.html"><a href="introdução.html"><i class="fa fa-check"></i><b>2</b> Introdução</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="introdução.html"><a href="introdução.html#objetivos-da-disciplina-1"><i class="fa fa-check"></i><b>2.1</b> Objetivos da Disciplina</a></li>
+<li class="chapter" data-level="2.2" data-path="introdução.html"><a href="introdução.html#conteúdo-programático-1"><i class="fa fa-check"></i><b>2.2</b> Conteúdo Programático</a></li>
+<li class="chapter" data-level="2.3" data-path="introdução.html"><a href="introdução.html#importância-da-fabricação-digital-1"><i class="fa fa-check"></i><b>2.3</b> Importância da Fabricação Digital</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html"><i class="fa fa-check"></i><b>3</b> Máquinas CNC</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#origens"><i class="fa fa-check"></i><b>3.1</b> Origens</a></li>
+<li class="chapter" data-level="3.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#terminologias"><i class="fa fa-check"></i><b>3.2</b> Terminologias</a></li>
+<li class="chapter" data-level="3.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#configurações-de-máquina"><i class="fa fa-check"></i><b>3.3</b> Configurações de Máquina</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#operação"><i class="fa fa-check"></i><b>3.3.1</b> Operação</a></li>
+<li class="chapter" data-level="3.3.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#estrutura"><i class="fa fa-check"></i><b>3.3.2</b> Estrutura</a></li>
+<li class="chapter" data-level="3.3.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#guias-e-suportes"><i class="fa fa-check"></i><b>3.3.3</b> Guias e Suportes</a></li>
+<li class="chapter" data-level="3.3.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#motores"><i class="fa fa-check"></i><b>3.3.4</b> Motores</a></li>
+<li class="chapter" data-level="3.3.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#acopladores"><i class="fa fa-check"></i><b>3.3.5</b> Acopladores</a></li>
+<li class="chapter" data-level="3.3.6" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#transmissão"><i class="fa fa-check"></i><b>3.3.6</b> Transmissão</a></li>
+<li class="chapter" data-level="3.3.7" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#eletrônica"><i class="fa fa-check"></i><b>3.3.7</b> Eletrônica</a></li>
+<li class="chapter" data-level="3.3.8" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#software"><i class="fa fa-check"></i><b>3.3.8</b> Software</a></li>
+<li class="chapter" data-level="3.3.9" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#ferramenta"><i class="fa fa-check"></i><b>3.3.9</b> Ferramenta</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#segurança"><i class="fa fa-check"></i><b>3.4</b> Segurança</a></li>
+<li class="chapter" data-level="3.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#fluxo-de-trabalho"><i class="fa fa-check"></i><b>3.5</b> Fluxo de Trabalho</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="impressão-3d.html"><a href="impressão-3d.html"><i class="fa fa-check"></i><b>4</b> Impressão 3D</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="impressão-3d.html"><a href="impressão-3d.html#o-que-é-impressora-3d"><i class="fa fa-check"></i><b>4.1</b> O Que é Impressora 3D</a></li>
+<li class="chapter" data-level="4.2" data-path="impressão-3d.html"><a href="impressão-3d.html#como-funciona-a-impressora-3d"><i class="fa fa-check"></i><b>4.2</b> Como Funciona a Impressora 3D</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="impressão-3d.html"><a href="impressão-3d.html#estrutura-e-componentes"><i class="fa fa-check"></i><b>4.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="impressão-3d.html"><a href="impressão-3d.html#experiência-prática-projeto-do-dragão-de-game-of-thrones"><i class="fa fa-check"></i><b>4.3</b> Experiência Prática: Projeto do Dragão de Game of Thrones</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="impressão-3d.html"><a href="impressão-3d.html#buscando-o-projeto"><i class="fa fa-check"></i><b>4.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="4.3.2" data-path="impressão-3d.html"><a href="impressão-3d.html#preparação-do-arquivo"><i class="fa fa-check"></i><b>4.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="4.3.3" data-path="impressão-3d.html"><a href="impressão-3d.html#processo-de-impressão"><i class="fa fa-check"></i><b>4.3.3</b> Processo de Impressão</a></li>
+<li class="chapter" data-level="4.3.4" data-path="impressão-3d.html"><a href="impressão-3d.html#resultado-final"><i class="fa fa-check"></i><b>4.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="4.3.5" data-path="impressão-3d.html"><a href="impressão-3d.html#reflexão-sobre-o-processo"><i class="fa fa-check"></i><b>4.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html"><i class="fa fa-check"></i><b>5</b> Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#o-que-é-uma-máquina-a-laser"><i class="fa fa-check"></i><b>5.1</b> O Que é uma Máquina a Laser</a></li>
+<li class="chapter" data-level="5.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#como-funciona-a-máquina-a-laser"><i class="fa fa-check"></i><b>5.2</b> Como Funciona a Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#estrutura-e-componentes-1"><i class="fa fa-check"></i><b>5.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#experiência-prática-projeto-da-caixa"><i class="fa fa-check"></i><b>5.3</b> Experiência Prática: Projeto da Caixa</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#buscando-o-projeto-1"><i class="fa fa-check"></i><b>5.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="5.3.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#preparação-do-arquivo-1"><i class="fa fa-check"></i><b>5.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="5.3.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#processo-de-corte"><i class="fa fa-check"></i><b>5.3.3</b> Processo de Corte</a></li>
+<li class="chapter" data-level="5.3.4" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#montagem-da-caixa"><i class="fa fa-check"></i><b>5.3.4</b> Montagem da Caixa</a></li>
+<li class="chapter" data-level="5.3.5" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#resultado-final-1"><i class="fa fa-check"></i><b>5.3.5</b> Resultado Final</a></li>
+<li class="chapter" data-level="5.3.6" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#reflexão-sobre-o-processo-1"><i class="fa fa-check"></i><b>5.3.6</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="plotter.html"><a href="plotter.html"><i class="fa fa-check"></i><b>6</b> Plotter</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="plotter.html"><a href="plotter.html#o-que-é-uma-plotter"><i class="fa fa-check"></i><b>6.1</b> O Que é uma Plotter</a></li>
+<li class="chapter" data-level="6.2" data-path="plotter.html"><a href="plotter.html#como-funciona-a-plotter"><i class="fa fa-check"></i><b>6.2</b> Como Funciona a Plotter</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="plotter.html"><a href="plotter.html#estrutura-e-componentes-2"><i class="fa fa-check"></i><b>6.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="plotter.html"><a href="plotter.html#experiência-prática-projeto-do-símbolo-targaryen"><i class="fa fa-check"></i><b>6.3</b> Experiência Prática: Projeto do Símbolo Targaryen</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="plotter.html"><a href="plotter.html#recebendo-as-instruções"><i class="fa fa-check"></i><b>6.3.1</b> Recebendo as Instruções</a></li>
+<li class="chapter" data-level="6.3.2" data-path="plotter.html"><a href="plotter.html#escolhendo-e-preparando-o-desenho"><i class="fa fa-check"></i><b>6.3.2</b> Escolhendo e Preparando o Desenho</a></li>
+<li class="chapter" data-level="6.3.3" data-path="plotter.html"><a href="plotter.html#processo-de-desenho"><i class="fa fa-check"></i><b>6.3.3</b> Processo de Desenho</a></li>
+<li class="chapter" data-level="6.3.4" data-path="plotter.html"><a href="plotter.html#resultado-final-2"><i class="fa fa-check"></i><b>6.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="6.3.5" data-path="plotter.html"><a href="plotter.html#reflexão-sobre-o-processo-2"><i class="fa fa-check"></i><b>6.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="blocks.html"><a href="blocks.html"><i class="fa fa-check"></i><b>7</b> Blocks</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="blocks.html"><a href="blocks.html#equations"><i class="fa fa-check"></i><b>7.1</b> Equations</a></li>
+<li class="chapter" data-level="7.2" data-path="blocks.html"><a href="blocks.html#theorems-and-proofs"><i class="fa fa-check"></i><b>7.2</b> Theorems and proofs</a></li>
+<li class="chapter" data-level="7.3" data-path="blocks.html"><a href="blocks.html#callout-blocks"><i class="fa fa-check"></i><b>7.3</b> Callout blocks</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i><b>8</b> Sharing your book</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="sharing-your-book.html"><a href="sharing-your-book.html#publishing"><i class="fa fa-check"></i><b>8.1</b> Publishing</a></li>
+<li class="chapter" data-level="8.2" data-path="sharing-your-book.html"><a href="sharing-your-book.html#pages"><i class="fa fa-check"></i><b>8.2</b> 404 pages</a></li>
+<li class="chapter" data-level="8.3" data-path="sharing-your-book.html"><a href="sharing-your-book.html#metadata-for-sharing"><i class="fa fa-check"></i><b>8.3</b> Metadata for sharing</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fabricação Digital</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introdução" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Introdução<a href="introdução.html#introdução" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Este é um relatório sobre a disciplina de <strong>Fabricação Digital</strong>, desenvolvido como parte do curso de Engenharia Elétrica. A disciplina aborda as tecnologias e processos envolvidos na fabricação de produtos através de métodos digitais. Esta área inclui técnicas como impressão 3D, corte a laser, fresagem CNC, entre outras.</p>
+<p>A <strong>impressão 3D</strong> é uma das tecnologias mais revolucionárias da fabricação digital, permitindo a criação de objetos tridimensionais a partir de modelos digitais. Utilizando materiais como plásticos, resinas e metais, a impressão 3D facilita a prototipagem rápida e a produção em pequena escala, tornando possível a fabricação de itens complexos com alta precisão e detalhes intricados.</p>
+<p>O <strong>corte a laser</strong> é outra técnica essencial, utilizando um feixe de laser para cortar ou gravar materiais como madeira, acrílico, metal e tecido. A precisão do corte a laser permite a criação de designs complexos e detalhados, e sua versatilidade o torna uma ferramenta indispensável em várias indústrias, desde a fabricação de produtos até a criação de obras de arte.</p>
+<p>A <strong>fresagem CNC</strong> é um processo de usinagem que utiliza controles computadorizados para operar máquinas de corte e modelagem. Esta técnica é usada para criar peças com precisão extrema, sendo amplamente aplicada na fabricação de componentes mecânicos e eletrônicos.</p>
+<p>A <strong>soldagem</strong> é um processo fundamental para a união de materiais, geralmente metais ou termoplásticos, através do aquecimento. Na fabricação digital, a soldagem é crucial para a criação de circuitos eletrônicos e a montagem de componentes, permitindo a fabricação de dispositivos eletrônicos funcionais e duráveis.</p>
+<p>A <strong>programação Arduino</strong> envolve o uso de uma plataforma de prototipagem eletrônica baseada em hardware e software livre. O Arduino permite a criação de projetos interativos e sistemas embarcados, sendo uma ferramenta poderosa para o desenvolvimento de protótipos eletrônicos e a implementação de soluções tecnológicas inovadoras.</p>
+<p>O <strong>plotter</strong> é uma impressora que utiliza canetas para desenhar em superfícies grandes, sendo amplamente utilizado para imprimir plantas, gráficos e outros desenhos técnicos. Sua precisão e capacidade de trabalhar em grandes formatos o tornam ideal para a criação de projetos detalhados e de alta qualidade.</p>
+<p>A <strong>criação de circuitos com fenolite através da corrosão</strong> envolve o uso de placas de fenolite revestidas com cobre, onde o layout do circuito é gravado através de um processo químico. Esta técnica permite a fabricação de circuitos impressos (PCBs) de forma eficiente e precisa, sendo essencial para a produção de dispositivos eletrônicos personalizados.</p>
+<div id="objetivos-da-disciplina-1" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Objetivos da Disciplina<a href="introdução.html#objetivos-da-disciplina-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Introduzir os conceitos fundamentais de fabricação digital.</li>
+<li>Apresentar as principais tecnologias e equipamentos utilizados.</li>
+<li>Desenvolver habilidades práticas no uso de ferramentas de fabricação digital.</li>
+<li>Explorar as aplicações da fabricação digital em diferentes indústrias.</li>
+</ul>
+</div>
+<div id="conteúdo-programático-1" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Conteúdo Programático<a href="introdução.html#conteúdo-programático-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><strong>Introdução à Fabricação Digital</strong>: História, importância e aplicações.</li>
+<li><strong>Tecnologias de Fabricação Digital</strong>: Impressão 3D, corte a laser, fresagem CNC.</li>
+<li><strong>Projetos Práticos</strong>: Desenvolvimento de projetos utilizando as tecnologias abordadas.</li>
+<li><strong>Tendências Futuras</strong>: Inovações e futuros desenvolvimentos na fabricação digital.</li>
+</ul>
+</div>
+<div id="importância-da-fabricação-digital-1" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Importância da Fabricação Digital<a href="introdução.html#importância-da-fabricação-digital-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A fabricação digital tem transformado a maneira como produtos são desenvolvidos e produzidos, oferecendo maior precisão, eficiência e possibilidades de personalização. Estas tecnologias são essenciais em áreas como prototipagem rápida, produção em pequena escala e fabricação personalizada.</p>
+<p>A disciplina de Fabricação Digital não apenas introduz os conceitos fundamentais dessas tecnologias, mas também oferece oportunidades para desenvolver habilidades práticas no uso de ferramentas de fabricação digital. Os alunos são incentivados a explorar as aplicações dessas tecnologias em diferentes indústrias, desde a prototipagem rápida até a produção em pequena escala e a fabricação personalizada. Através de projetos práticos, os alunos têm a chance de aplicar o conhecimento adquirido e criar produtos inovadores que atendam às necessidades específicas dos usuários.</p>
+<p>Além disso, a disciplina destaca as tendências futuras e as inovações na fabricação digital, preparando os alunos para os desenvolvimentos tecnológicos que estão por vir. Com o avanço contínuo das tecnologias digitais, a fabricação digital continua a abrir novas possibilidades e transformar indústrias inteiras, desde a manufatura até a medicina, a construção civil e muito mais.</p>
+<p>A importância da fabricação digital reside na sua capacidade de transformar a maneira como os produtos são desenvolvidos e produzidos. Oferecendo maior precisão, eficiência e possibilidades de personalização, essas tecnologias estão revolucionando a fabricação de produtos e criando novas oportunidades para a inovação. Seja na criação de protótipos rápidos, na produção em pequena escala ou na fabricação personalizada, a fabricação digital está desempenhando um papel crucial na definição do futuro da manufatura e na criação de produtos que melhoram a vida das pessoas.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="máquinas-cnc.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/01-introd.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

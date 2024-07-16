@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 9 Prjeto de um transmissor AM | Fabricação Digital</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 9 Prjeto de um transmissor AM | Fabricação Digital" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 9 Prjeto de um transmissor AM | Fabricação Digital" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Gabriel Lima Ferreira" />
+
+
+<meta name="date" content="2024-07-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="soldagem.html"/>
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like https://bookdown.org/yihui/bookdown</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#objetivos-da-disciplina"><i class="fa fa-check"></i><b>1.1</b> Objetivos da Disciplina</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#conteúdo-programático"><i class="fa fa-check"></i><b>1.2</b> Conteúdo Programático</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#importância-da-fabricação-digital"><i class="fa fa-check"></i><b>1.3</b> Importância da Fabricação Digital</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html"><i class="fa fa-check"></i><b>2</b> Máquinas CNC</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#origens"><i class="fa fa-check"></i><b>2.1</b> Origens</a></li>
+<li class="chapter" data-level="2.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#terminologias"><i class="fa fa-check"></i><b>2.2</b> Terminologias</a></li>
+<li class="chapter" data-level="2.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#configurações-de-máquina"><i class="fa fa-check"></i><b>2.3</b> Configurações de Máquina</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#operação"><i class="fa fa-check"></i><b>2.3.1</b> Operação</a></li>
+<li class="chapter" data-level="2.3.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#estrutura"><i class="fa fa-check"></i><b>2.3.2</b> Estrutura</a></li>
+<li class="chapter" data-level="2.3.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#guias-e-suportes"><i class="fa fa-check"></i><b>2.3.3</b> Guias e Suportes</a></li>
+<li class="chapter" data-level="2.3.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#motores"><i class="fa fa-check"></i><b>2.3.4</b> Motores</a></li>
+<li class="chapter" data-level="2.3.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#acopladores"><i class="fa fa-check"></i><b>2.3.5</b> Acopladores</a></li>
+<li class="chapter" data-level="2.3.6" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#transmissão"><i class="fa fa-check"></i><b>2.3.6</b> Transmissão</a></li>
+<li class="chapter" data-level="2.3.7" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#eletrônica"><i class="fa fa-check"></i><b>2.3.7</b> Eletrônica</a></li>
+<li class="chapter" data-level="2.3.8" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#software"><i class="fa fa-check"></i><b>2.3.8</b> Software</a></li>
+<li class="chapter" data-level="2.3.9" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#ferramenta"><i class="fa fa-check"></i><b>2.3.9</b> Ferramenta</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#segurança"><i class="fa fa-check"></i><b>2.4</b> Segurança</a></li>
+<li class="chapter" data-level="2.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#fluxo-de-trabalho"><i class="fa fa-check"></i><b>2.5</b> Fluxo de Trabalho</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="impressão-3d.html"><a href="impressão-3d.html"><i class="fa fa-check"></i><b>3</b> Impressão 3D</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="impressão-3d.html"><a href="impressão-3d.html#o-que-é-impressora-3d"><i class="fa fa-check"></i><b>3.1</b> O Que é Impressora 3D</a></li>
+<li class="chapter" data-level="3.2" data-path="impressão-3d.html"><a href="impressão-3d.html#como-funciona-a-impressora-3d"><i class="fa fa-check"></i><b>3.2</b> Como Funciona a Impressora 3D</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="impressão-3d.html"><a href="impressão-3d.html#estrutura-e-componentes"><i class="fa fa-check"></i><b>3.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="impressão-3d.html"><a href="impressão-3d.html#experiência-prática-projeto-do-dragão-de-game-of-thrones"><i class="fa fa-check"></i><b>3.3</b> Experiência Prática: Projeto do Dragão de Game of Thrones</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="impressão-3d.html"><a href="impressão-3d.html#buscando-o-projeto"><i class="fa fa-check"></i><b>3.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="3.3.2" data-path="impressão-3d.html"><a href="impressão-3d.html#preparação-do-arquivo"><i class="fa fa-check"></i><b>3.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="3.3.3" data-path="impressão-3d.html"><a href="impressão-3d.html#processo-de-impressão"><i class="fa fa-check"></i><b>3.3.3</b> Processo de Impressão</a></li>
+<li class="chapter" data-level="3.3.4" data-path="impressão-3d.html"><a href="impressão-3d.html#resultado-final"><i class="fa fa-check"></i><b>3.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="3.3.5" data-path="impressão-3d.html"><a href="impressão-3d.html#reflexão-sobre-o-processo"><i class="fa fa-check"></i><b>3.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html"><i class="fa fa-check"></i><b>4</b> Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#o-que-é-uma-máquina-a-laser"><i class="fa fa-check"></i><b>4.1</b> O Que é uma Máquina a Laser</a></li>
+<li class="chapter" data-level="4.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#como-funciona-a-máquina-a-laser"><i class="fa fa-check"></i><b>4.2</b> Como Funciona a Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#estrutura-e-componentes-1"><i class="fa fa-check"></i><b>4.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#experiência-prática-projeto-da-caixa"><i class="fa fa-check"></i><b>4.3</b> Experiência Prática: Projeto da Caixa</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#buscando-o-projeto-1"><i class="fa fa-check"></i><b>4.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="4.3.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#preparação-do-arquivo-1"><i class="fa fa-check"></i><b>4.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="4.3.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#processo-de-corte"><i class="fa fa-check"></i><b>4.3.3</b> Processo de Corte</a></li>
+<li class="chapter" data-level="4.3.4" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#montagem-da-caixa"><i class="fa fa-check"></i><b>4.3.4</b> Montagem da Caixa</a></li>
+<li class="chapter" data-level="4.3.5" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#resultado-final-1"><i class="fa fa-check"></i><b>4.3.5</b> Resultado Final</a></li>
+<li class="chapter" data-level="4.3.6" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#reflexão-sobre-o-processo-1"><i class="fa fa-check"></i><b>4.3.6</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="plotter.html"><a href="plotter.html"><i class="fa fa-check"></i><b>5</b> Plotter</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="plotter.html"><a href="plotter.html#o-que-é-uma-plotter"><i class="fa fa-check"></i><b>5.1</b> O Que é uma Plotter</a></li>
+<li class="chapter" data-level="5.2" data-path="plotter.html"><a href="plotter.html#como-funciona-a-plotter"><i class="fa fa-check"></i><b>5.2</b> Como Funciona a Plotter</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="plotter.html"><a href="plotter.html#estrutura-e-componentes-2"><i class="fa fa-check"></i><b>5.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="plotter.html"><a href="plotter.html#experiência-prática-projeto-do-símbolo-targaryen"><i class="fa fa-check"></i><b>5.3</b> Experiência Prática: Projeto do Símbolo Targaryen</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="plotter.html"><a href="plotter.html#recebendo-as-instruções"><i class="fa fa-check"></i><b>5.3.1</b> Recebendo as Instruções</a></li>
+<li class="chapter" data-level="5.3.2" data-path="plotter.html"><a href="plotter.html#escolhendo-e-preparando-o-desenho"><i class="fa fa-check"></i><b>5.3.2</b> Escolhendo e Preparando o Desenho</a></li>
+<li class="chapter" data-level="5.3.3" data-path="plotter.html"><a href="plotter.html#processo-de-desenho"><i class="fa fa-check"></i><b>5.3.3</b> Processo de Desenho</a></li>
+<li class="chapter" data-level="5.3.4" data-path="plotter.html"><a href="plotter.html#resultado-final-2"><i class="fa fa-check"></i><b>5.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="5.3.5" data-path="plotter.html"><a href="plotter.html#reflexão-sobre-o-processo-2"><i class="fa fa-check"></i><b>5.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="arduino.html"><a href="arduino.html"><i class="fa fa-check"></i><b>6</b> Arduino</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="arduino.html"><a href="arduino.html#o-que-é-o-arduino"><i class="fa fa-check"></i><b>6.1</b> O Que é o Arduino</a></li>
+<li class="chapter" data-level="6.2" data-path="arduino.html"><a href="arduino.html#para-que-serve-o-arduino"><i class="fa fa-check"></i><b>6.2</b> Para Que Serve o Arduino</a></li>
+<li class="chapter" data-level="6.3" data-path="arduino.html"><a href="arduino.html#programação-no-arduino"><i class="fa fa-check"></i><b>6.3</b> Programação no Arduino</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="arduino.html"><a href="arduino.html#estrutura-básica-de-um-programa-arduino"><i class="fa fa-check"></i><b>6.3.1</b> Estrutura Básica de um Programa Arduino</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="arduino.html"><a href="arduino.html#tipos-de-arduino"><i class="fa fa-check"></i><b>6.4</b> Tipos de Arduino</a></li>
+<li class="chapter" data-level="6.5" data-path="arduino.html"><a href="arduino.html#bancada-de-sistema-de-controle"><i class="fa fa-check"></i><b>6.5</b> Bancada de Sistema de Controle</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="arduino.html"><a href="arduino.html#apresentação-da-bancada"><i class="fa fa-check"></i><b>6.5.1</b> Apresentação da Bancada</a></li>
+<li class="chapter" data-level="6.5.2" data-path="arduino.html"><a href="arduino.html#explicação-da-bancada"><i class="fa fa-check"></i><b>6.5.2</b> Explicação da Bancada</a></li>
+<li class="chapter" data-level="6.5.3" data-path="arduino.html"><a href="arduino.html#foto-da-bancada"><i class="fa fa-check"></i><b>6.5.3</b> Foto da Bancada</a></li>
+<li class="chapter" data-level="6.5.4" data-path="arduino.html"><a href="arduino.html#reflexão-sobre-o-processo-3"><i class="fa fa-check"></i><b>6.5.4</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html"><i class="fa fa-check"></i><b>7</b> Processo de Corrosão</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#o-que-é-a-corrosão"><i class="fa fa-check"></i><b>7.1</b> O Que é a Corrosão</a></li>
+<li class="chapter" data-level="7.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#como-funciona-a-corrosão"><i class="fa fa-check"></i><b>7.2</b> Como Funciona a Corrosão</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#materiais-e-ferramentas"><i class="fa fa-check"></i><b>7.2.1</b> Materiais e Ferramentas</a></li>
+<li class="chapter" data-level="7.2.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#monitoramento-e-ajustes"><i class="fa fa-check"></i><b>7.2.2</b> Monitoramento e Ajustes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#experiência-prática-fabricação-de-um-circuito"><i class="fa fa-check"></i><b>7.3</b> Experiência Prática: Fabricação de um Circuito</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#recebendo-as-instruções-1"><i class="fa fa-check"></i><b>7.3.1</b> Recebendo as Instruções</a></li>
+<li class="chapter" data-level="7.3.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#aplicando-a-máscara-e-realizando-a-corrosão"><i class="fa fa-check"></i><b>7.3.2</b> Aplicando a Máscara e Realizando a Corrosão</a></li>
+<li class="chapter" data-level="7.3.3" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#resultado-final-3"><i class="fa fa-check"></i><b>7.3.3</b> Resultado Final</a></li>
+<li class="chapter" data-level="7.3.4" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#reflexão-sobre-o-processo-4"><i class="fa fa-check"></i><b>7.3.4</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="soldagem.html"><a href="soldagem.html"><i class="fa fa-check"></i><b>8</b> Soldagem</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="soldagem.html"><a href="soldagem.html#o-processo-de-soldagem"><i class="fa fa-check"></i><b>8.1</b> O Processo de Soldagem</a></li>
+<li class="chapter" data-level="8.2" data-path="soldagem.html"><a href="soldagem.html#o-material-estanho"><i class="fa fa-check"></i><b>8.2</b> O Material: Estanho</a></li>
+<li class="chapter" data-level="8.3" data-path="soldagem.html"><a href="soldagem.html#a-estação-de-solda"><i class="fa fa-check"></i><b>8.3</b> A Estação de Solda</a></li>
+<li class="chapter" data-level="8.4" data-path="soldagem.html"><a href="soldagem.html#a-prática-de-soldagem"><i class="fa fa-check"></i><b>8.4</b> A Prática de Soldagem</a></li>
+<li class="chapter" data-level="8.5" data-path="soldagem.html"><a href="soldagem.html#reflexão-sobre-o-processo-5"><i class="fa fa-check"></i><b>8.5</b> 8.5 Reflexão Sobre o Processo</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html"><i class="fa fa-check"></i><b>9</b> Prjeto de um transmissor AM</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#o-que-é-um-transmissor-am"><i class="fa fa-check"></i><b>9.1</b> O que é um Transmissor AM</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#princípios-de-funcionamento"><i class="fa fa-check"></i><b>9.1.1</b> Princípios de Funcionamento</a></li>
+<li class="chapter" data-level="9.1.2" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#vantagens-e-desvantagens"><i class="fa fa-check"></i><b>9.1.2</b> Vantagens e Desvantagens</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#descrição-do-projeto"><i class="fa fa-check"></i><b>9.2</b> Descrição do Projeto</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#componentes-e-materiais"><i class="fa fa-check"></i><b>9.2.1</b> Componentes e Materiais</a></li>
+<li class="chapter" data-level="9.2.2" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#objetivo-do-projeto"><i class="fa fa-check"></i><b>9.2.2</b> Objetivo do Projeto</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#cálculos-e-simulação"><i class="fa fa-check"></i><b>9.3</b> Cálculos e Simulação</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#cálculos-teóricos"><i class="fa fa-check"></i><b>9.3.1</b> Cálculos Teóricos</a></li>
+<li class="chapter" data-level="9.3.2" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#simulação-no-ltspice"><i class="fa fa-check"></i><b>9.3.2</b> Simulação no LTSpice</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#montagem-do-circuito"><i class="fa fa-check"></i><b>9.4</b> Montagem do Circuito</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#montagem-em-placa-de-prototipagem"><i class="fa fa-check"></i><b>9.4.1</b> Montagem em Placa de Prototipagem</a></li>
+<li class="chapter" data-level="9.4.2" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#ajustes-e-testes"><i class="fa fa-check"></i><b>9.4.2</b> Ajustes e Testes</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#produção-do-circuito-impresso"><i class="fa fa-check"></i><b>9.5</b> Produção do Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#º-passo-carregar-o-arquivo-no-candle"><i class="fa fa-check"></i><b>9.5.1</b> 1º Passo: Carregar o Arquivo no Candle</a></li>
+<li class="chapter" data-level="9.5.2" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#º-passo-medição-de-desnível-da-placa"><i class="fa fa-check"></i><b>9.5.2</b> 2º Passo: Medição de Desnível da Placa</a></li>
+<li class="chapter" data-level="9.5.3" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#º-passo-fresagem-das-trilhas"><i class="fa fa-check"></i><b>9.5.3</b> 3º Passo: Fresagem das Trilhas</a></li>
+<li class="chapter" data-level="9.5.4" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#º-passo-produção-dos-furos"><i class="fa fa-check"></i><b>9.5.4</b> 4º Passo: Produção dos Furos</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#reflexão-sobre-o-processo-6"><i class="fa fa-check"></i><b>9.6</b> 9.6 Reflexão Sobre o Processo</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#desafios-e-aprendizados"><i class="fa fa-check"></i><b>9.6.1</b> Desafios e Aprendizados</a></li>
+<li class="chapter" data-level="9.6.2" data-path="prjeto-de-um-transmissor-am.html"><a href="prjeto-de-um-transmissor-am.html#impacto-no-desenvolvimento-profissional"><i class="fa fa-check"></i><b>9.6.2</b> Impacto no Desenvolvimento Profissional</a></li>
+</ul></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fabricação Digital</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="prjeto-de-um-transmissor-am" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Chapter 9</span> Prjeto de um transmissor AM<a href="prjeto-de-um-transmissor-am.html#prjeto-de-um-transmissor-am" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="o-que-é-um-transmissor-am" class="section level2 hasAnchor" number="9.1">
+<h2><span class="header-section-number">9.1</span> O que é um Transmissor AM<a href="prjeto-de-um-transmissor-am.html#o-que-é-um-transmissor-am" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A modulação de amplitude (AM) é uma técnica essencial na radiocomunicação, que permite a transmissão de informações através de uma onda portadora de alta frequência. Neste processo, a amplitude da onda portadora é variada proporcionalmente à amplitude do sinal de mensagem que contém a informação a ser transmitida. A modulação de amplitude é amplamente utilizada em radiodifusão AM e em sistemas de comunicação de longa distância devido à sua simplicidade e eficiência.</p>
+<div id="princípios-de-funcionamento" class="section level3 hasAnchor" number="9.1.1">
+<h3><span class="header-section-number">9.1.1</span> Princípios de Funcionamento<a href="prjeto-de-um-transmissor-am.html#princípios-de-funcionamento" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O funcionamento de um transmissor AM baseia-se em três componentes principais: o gerador de portadora, o modulador e o amplificador de potência. O gerador de portadora cria uma onda senoidal de alta frequência constante. Em seguida, o modulador varia a amplitude desta onda conforme o sinal de mensagem. Finalmente, o amplificador de potência aumenta a amplitude do sinal modulado para que ele possa ser transmitido eficientemente através de uma antena.</p>
+</div>
+<div id="vantagens-e-desvantagens" class="section level3 hasAnchor" number="9.1.2">
+<h3><span class="header-section-number">9.1.2</span> Vantagens e Desvantagens<a href="prjeto-de-um-transmissor-am.html#vantagens-e-desvantagens" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A modulação de amplitude possui diversas vantagens, como a simplicidade dos circuitos e a capacidade de ser demodulada facilmente. No entanto, também apresenta desvantagens, como a susceptibilidade a interferências e ruídos, bem como uma eficiência de potência relativamente baixa, já que uma grande parte da energia é utilizada para transmitir a portadora em vez do sinal de mensagem.</p>
+</div>
+</div>
+<div id="descrição-do-projeto" class="section level2 hasAnchor" number="9.2">
+<h2><span class="header-section-number">9.2</span> Descrição do Projeto<a href="prjeto-de-um-transmissor-am.html#descrição-do-projeto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Um dos projetos mais desafiadores e enriquecedores que realizei foi a construção de um transmissor AM. O objetivo deste projeto foi desenvolver um sistema de modulação de amplitude eficiente e preciso, capaz de transmitir informações de maneira clara e confiável. Este projeto envolveu diversas etapas, desde a concepção inicial até a montagem e testes finais.</p>
+<div id="componentes-e-materiais" class="section level3 hasAnchor" number="9.2.1">
+<h3><span class="header-section-number">9.2.1</span> Componentes e Materiais<a href="prjeto-de-um-transmissor-am.html#componentes-e-materiais" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Para gerar a portadora, utilizei um oscilador Colpitts devido à sua estabilidade e capacidade de operar em alta frequência. O circuito oscilador Colpitts foi projetado utilizando resistores, indutores, bobinas, capacitores e um filtro. Estes componentes foram escolhidos por suas características específicas que garantem a precisão e eficiência do circuito. Além disso, utilizei um gerador de sinal para criar o sinal de mensagem e um osciloscópio para observar e analisar o sinal de saída.</p>
+<div id="resistores" class="section level4 hasAnchor" number="9.2.1.1">
+<h4><span class="header-section-number">9.2.1.1</span> Resistores<a href="prjeto-de-um-transmissor-am.html#resistores" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Os resistores foram selecionados para controlar os níveis de corrente e tensão no circuito. Eles são fundamentais para garantir a estabilidade do oscilador e a correta modulação do sinal.</p>
+</div>
+<div id="indutores-e-bobinas" class="section level4 hasAnchor" number="9.2.1.2">
+<h4><span class="header-section-number">9.2.1.2</span> Indutores e Bobinas<a href="prjeto-de-um-transmissor-am.html#indutores-e-bobinas" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Os indutores e bobinas foram escolhidos pela sua capacidade de armazenar energia magnética e por suas propriedades de ressonância, que são cruciais para a operação do oscilador em alta frequência.</p>
+</div>
+<div id="capacitores" class="section level4 hasAnchor" number="9.2.1.3">
+<h4><span class="header-section-number">9.2.1.3</span> Capacitores<a href="prjeto-de-um-transmissor-am.html#capacitores" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Os capacitores foram utilizados para formar o circuito tanque do oscilador Colpitts, determinando a frequência de operação e estabilizando a oscilação.</p>
+</div>
+<div id="filtro" class="section level4 hasAnchor" number="9.2.1.4">
+<h4><span class="header-section-number">9.2.1.4</span> Filtro<a href="prjeto-de-um-transmissor-am.html#filtro" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>O filtro foi empregado para limpar o sinal de saída, removendo harmônicas indesejadas e garantindo que o sinal transmitido fosse uma representação fiel do sinal de mensagem modulado pela portadora.</p>
+</div>
+</div>
+<div id="objetivo-do-projeto" class="section level3 hasAnchor" number="9.2.2">
+<h3><span class="header-section-number">9.2.2</span> Objetivo do Projeto<a href="prjeto-de-um-transmissor-am.html#objetivo-do-projeto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O principal objetivo do projeto foi desenvolver um transmissor AM que pudesse modular um sinal de entrada (mensagem) e transmitir uma portadora modulada com alta eficiência e precisão. Este projeto não só envolveu a construção física do transmissor, mas também a aplicação de princípios teóricos de modulação de amplitude e análise de circuitos de alta frequência.</p>
+</div>
+</div>
+<div id="cálculos-e-simulação" class="section level2 hasAnchor" number="9.3">
+<h2><span class="header-section-number">9.3</span> Cálculos e Simulação<a href="prjeto-de-um-transmissor-am.html#cálculos-e-simulação" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A primeira etapa do projeto foi realizar os cálculos teóricos necessários para projetar o circuito oscilador Colpitts. O objetivo era que o oscilador operasse em uma frequência de aproximadamente 400 kHz, uma frequência comum para transmissões AM de curto alcance.</p>
+<div id="cálculos-teóricos" class="section level3 hasAnchor" number="9.3.1">
+<h3><span class="header-section-number">9.3.1</span> Cálculos Teóricos<a href="prjeto-de-um-transmissor-am.html#cálculos-teóricos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Os cálculos teóricos envolveram a determinação dos valores dos componentes do circuito tanque do oscilador Colpitts, que consiste em capacitores e indutores. A frequência de ressonância do oscilador é dada pela fórmula:</p>
+<p><span class="math display">\[ f = \frac{1}{2\pi\sqrt{LC}} \]</span></p>
+<p>Onde <span class="math inline">\(L\)</span> é a indutância e <span class="math inline">\(C\)</span> é a capacitância do circuito. Utilizando esta fórmula, selecionei valores apropriados para <span class="math inline">\(L\)</span> e <span class="math inline">\(C\)</span> que resultassem na frequência desejada de 400 kHz. A precisão destes cálculos é crucial, pois qualquer desvio pode afetar a estabilidade e a performance do oscilador.</p>
+</div>
+<div id="simulação-no-ltspice" class="section level3 hasAnchor" number="9.3.2">
+<h3><span class="header-section-number">9.3.2</span> Simulação no LTSpice<a href="prjeto-de-um-transmissor-am.html#simulação-no-ltspice" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Após os cálculos, utilizei o software LTSpice para simular o circuito. A simulação é uma etapa vital, pois permite verificar o funcionamento do circuito em um ambiente virtual, identificando possíveis problemas e ajustando os componentes conforme necessário.</p>
+<img src="resultadocorro.jpg" style="display:block; margin:0 auto;;width:30.0%" height="300" />
+<center>
+Simulação no LTSpice.
+</center>
+<p>Durante a simulação, monitorei o comportamento do oscilador, observando a forma de onda gerada e sua frequência. Ajustes finos foram feitos nos valores dos componentes para otimizar a performance do circuito e garantir que operasse exatamente na frequência desejada.</p>
+</div>
+</div>
+<div id="montagem-do-circuito" class="section level2 hasAnchor" number="9.4">
+<h2><span class="header-section-number">9.4</span> Montagem do Circuito<a href="prjeto-de-um-transmissor-am.html#montagem-do-circuito" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Com a simulação validada, procedi à montagem do circuito físico. Esta etapa foi particularmente desafiadora e envolvente, pois exigiu atenção aos detalhes e precisão na montagem dos componentes.</p>
+<div id="montagem-em-placa-de-prototipagem" class="section level3 hasAnchor" number="9.4.1">
+<h3><span class="header-section-number">9.4.1</span> Montagem em Placa de Prototipagem<a href="prjeto-de-um-transmissor-am.html#montagem-em-placa-de-prototipagem" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A montagem foi realizada em uma placa de prototipagem, onde soldei os componentes de acordo com o esquema do circuito. Utilizei técnicas de soldagem aprendidas anteriormente para garantir conexões seguras e eficientes.</p>
+<img src="resultadocorro.jpg" style="display:block; margin:0 auto;;width:30.0%" height="300" />
+<center>
+Circuito Montado 1.
+</center>
+</div>
+<div id="ajustes-e-testes" class="section level3 hasAnchor" number="9.4.2">
+<h3><span class="header-section-number">9.4.2</span> Ajustes e Testes<a href="prjeto-de-um-transmissor-am.html#ajustes-e-testes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Após a montagem, conectei o circuito a um osciloscópio para monitorar a saída. A modulação do sinal de entrada foi ajustada para garantir a integridade do sinal de saída. Utilizando o osciloscópio, foi possível observar a forma de onda do sinal modulado, confirmando que a modulação AM estava sendo realizada corretamente.</p>
+<img src="resultadocorro.jpg" style="display:block; margin:0 auto;;width:30.0%" height="300" />
+<center>
+Circuito Montado 2.
+</center>
+<p>Os ajustes finos no circuito foram realizados para otimizar a qualidade do sinal modulado. Esta etapa foi crucial para garantir que o transmissor operasse de forma eficiente e que o sinal de saída fosse uma representação fiel do sinal de entrada.</p>
+</div>
+</div>
+<div id="produção-do-circuito-impresso" class="section level2 hasAnchor" number="9.5">
+<h2><span class="header-section-number">9.5</span> Produção do Circuito Impresso<a href="prjeto-de-um-transmissor-am.html#produção-do-circuito-impresso" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Com o circuito funcional montado em uma placa de prototipagem, decidi avançar para a produção de um circuito impresso (PCB) utilizando uma mini fresadora. Este processo envolveu várias etapas detalhadas:</p>
+<div id="º-passo-carregar-o-arquivo-no-candle" class="section level3 hasAnchor" number="9.5.1">
+<h3><span class="header-section-number">9.5.1</span> 1º Passo: Carregar o Arquivo no Candle<a href="prjeto-de-um-transmissor-am.html#º-passo-carregar-o-arquivo-no-candle" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O primeiro passo foi carregar o arquivo de trilhas da PCB no software Candle, utilizado para controlar a fresadora. Verifiquei se as dimensões da placa estavam de acordo com as do material a ser utilizado.</p>
+<img src="resultadocorro.jpg" style="display:block; margin:0 auto;;width:30.0%" height="300" />
+<center>
+Carregando o arquivo no Candle.
+</center>
+</div>
+<div id="º-passo-medição-de-desnível-da-placa" class="section level3 hasAnchor" number="9.5.2">
+<h3><span class="header-section-number">9.5.2</span> 2º Passo: Medição de Desnível da Placa<a href="prjeto-de-um-transmissor-am.html#º-passo-medição-de-desnível-da-placa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Realizei uma medição de desnível da placa (mapa de altura) dentro do Candle, para garantir que a qualidade das trilhas não fosse prejudicada devido ao desnível da placa. Utilizamos o mesmo mapa de altura para os furos.</p>
+<img src="resultadocorro.jpg" style="display:block; margin:0 auto;;width:30.0%" height="300" />
+<center>
+Medição de Desnível da Placa.
+</center>
+</div>
+<div id="º-passo-fresagem-das-trilhas" class="section level3 hasAnchor" number="9.5.3">
+<h3><span class="header-section-number">9.5.3</span> 3º Passo: Fresagem das Trilhas<a href="prjeto-de-um-transmissor-am.html#º-passo-fresagem-das-trilhas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Após a medição do mapa de altura, utilizei uma fresa V com ponta de 0.1mm e ângulo de 20 graus para fazer as trilhas com base no arquivo de trilhas. Este processo foi realizado com precisão para garantir que todas as conexões fossem corretamente estabelecidas.</p>
+<img src="resultadocorro.jpg" style="display:block; margin:0 auto;;width:30.0%" height="300" />
+<center>
+Fresagem das Trilhas.
+</center>
+</div>
+<div id="º-passo-produção-dos-furos" class="section level3 hasAnchor" number="9.5.4">
+<h3><span class="header-section-number">9.5.4</span> 4º Passo: Produção dos Furos<a href="prjeto-de-um-transmissor-am.html#º-passo-produção-dos-furos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Em seguida, usei uma fresa topo-reta raiada com diâmetro de 1mm para produzir os furos da placa. Estes furos foram feitos nos pontos designados para a montagem dos componentes eletrônicos.</p>
+<img src="resultadocorro.jpg" style="display:block; margin:0 auto;;width:30.0%" height="300" />
+<center>
+Produção dos Furos.
+</center>
+</div>
+</div>
+<div id="reflexão-sobre-o-processo-6" class="section level2 hasAnchor" number="9.6">
+<h2><span class="header-section-number">9.6</span> 9.6 Reflexão Sobre o Processo<a href="prjeto-de-um-transmissor-am.html#reflexão-sobre-o-processo-6" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>O desenvolvimento deste transmissor AM foi uma experiência extremamente enriquecedora. Cada etapa do projeto, desde os cálculos teóricos até a montagem e testes finais, proporcionou um aprendizado significativo sobre modulação de amplitude e design de circuitos de alta frequência. A integração de conhecimento teórico com aplicação prática reforçou minha compreensão dos conceitos e técnicas envolvidos.</p>
+<div id="desafios-e-aprendizados" class="section level3 hasAnchor" number="9.6.1">
+<h3><span class="header-section-number">9.6.1</span> Desafios e Aprendizados<a href="prjeto-de-um-transmissor-am.html#desafios-e-aprendizados" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Um dos maiores desafios foi garantir a precisão do oscilador Colpitts e a qualidade da modulação AM. O uso do osciloscópio para monitorar e ajustar o sinal modulado foi crucial para o sucesso do projeto. Além disso, a transição do circuito de prototipagem para um PCB exigiu um cuidado adicional para manter a integridade das conexões e a qualidade das trilhas.</p>
+</div>
+<div id="impacto-no-desenvolvimento-profissional" class="section level3 hasAnchor" number="9.6.2">
+<h3><span class="header-section-number">9.6.2</span> Impacto no Desenvolvimento Profissional<a href="prjeto-de-um-transmissor-am.html#impacto-no-desenvolvimento-profissional" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Este projeto não só consolidou meu conhecimento em eletrônica e radiocomunicação, mas também aprimorou minhas habilidades práticas em soldagem, montagem de circuitos e produção de PCBs. A experiência adquirida será valiosa para futuros projetos e para minha carreira como engenheiro eletrônico.</p>
+<p>O transmissor AM desenvolvido é um exemplo prático de como a teoria pode ser aplicada para criar soluções funcionais e eficientes em radiocomunicação. A conclusão deste projeto me deu uma sensação de realização e me motivou a continuar explorando e inovando na área de engenharia eletrônica.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="soldagem.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/09-projeto.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

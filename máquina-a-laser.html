@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Máquina a Laser | Fabricação Digital</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Máquina a Laser | Fabricação Digital" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Máquina a Laser | Fabricação Digital" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Gabriel Lima Ferreira" />
+
+
+<meta name="date" content="2024-07-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="impressão-3d.html"/>
+<link rel="next" href="plotter.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introdução</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#objetivos-da-disciplina"><i class="fa fa-check"></i><b>1.1</b> Objetivos da Disciplina</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#conteúdo-programático"><i class="fa fa-check"></i><b>1.2</b> Conteúdo Programático</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#importância-da-fabricação-digital"><i class="fa fa-check"></i><b>1.3</b> Importância da Fabricação Digital</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html"><i class="fa fa-check"></i><b>2</b> Máquinas CNC</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#origens"><i class="fa fa-check"></i><b>2.1</b> Origens</a></li>
+<li class="chapter" data-level="2.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#terminologias"><i class="fa fa-check"></i><b>2.2</b> Terminologias</a></li>
+<li class="chapter" data-level="2.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#configurações-de-máquina"><i class="fa fa-check"></i><b>2.3</b> Configurações de Máquina</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#operação"><i class="fa fa-check"></i><b>2.3.1</b> Operação</a></li>
+<li class="chapter" data-level="2.3.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#estrutura"><i class="fa fa-check"></i><b>2.3.2</b> Estrutura</a></li>
+<li class="chapter" data-level="2.3.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#guias-e-suportes"><i class="fa fa-check"></i><b>2.3.3</b> Guias e Suportes</a></li>
+<li class="chapter" data-level="2.3.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#motores"><i class="fa fa-check"></i><b>2.3.4</b> Motores</a></li>
+<li class="chapter" data-level="2.3.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#acopladores"><i class="fa fa-check"></i><b>2.3.5</b> Acopladores</a></li>
+<li class="chapter" data-level="2.3.6" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#transmissão"><i class="fa fa-check"></i><b>2.3.6</b> Transmissão</a></li>
+<li class="chapter" data-level="2.3.7" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#eletrônica"><i class="fa fa-check"></i><b>2.3.7</b> Eletrônica</a></li>
+<li class="chapter" data-level="2.3.8" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#software"><i class="fa fa-check"></i><b>2.3.8</b> Software</a></li>
+<li class="chapter" data-level="2.3.9" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#ferramenta"><i class="fa fa-check"></i><b>2.3.9</b> Ferramenta</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#segurança"><i class="fa fa-check"></i><b>2.4</b> Segurança</a></li>
+<li class="chapter" data-level="2.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#fluxo-de-trabalho"><i class="fa fa-check"></i><b>2.5</b> Fluxo de Trabalho</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="impressão-3d.html"><a href="impressão-3d.html"><i class="fa fa-check"></i><b>3</b> Impressão 3D</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="impressão-3d.html"><a href="impressão-3d.html#o-que-é-impressora-3d"><i class="fa fa-check"></i><b>3.1</b> O Que é Impressora 3D</a></li>
+<li class="chapter" data-level="3.2" data-path="impressão-3d.html"><a href="impressão-3d.html#como-funciona-a-impressora-3d"><i class="fa fa-check"></i><b>3.2</b> Como Funciona a Impressora 3D</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="impressão-3d.html"><a href="impressão-3d.html#estrutura-e-componentes"><i class="fa fa-check"></i><b>3.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="impressão-3d.html"><a href="impressão-3d.html#experiência-prática-projeto-do-dragão-de-game-of-thrones"><i class="fa fa-check"></i><b>3.3</b> Experiência Prática: Projeto do Dragão de Game of Thrones</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="impressão-3d.html"><a href="impressão-3d.html#buscando-o-projeto"><i class="fa fa-check"></i><b>3.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="3.3.2" data-path="impressão-3d.html"><a href="impressão-3d.html#preparação-do-arquivo"><i class="fa fa-check"></i><b>3.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="3.3.3" data-path="impressão-3d.html"><a href="impressão-3d.html#processo-de-impressão"><i class="fa fa-check"></i><b>3.3.3</b> Processo de Impressão</a></li>
+<li class="chapter" data-level="3.3.4" data-path="impressão-3d.html"><a href="impressão-3d.html#resultado-final"><i class="fa fa-check"></i><b>3.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="3.3.5" data-path="impressão-3d.html"><a href="impressão-3d.html#reflexão-sobre-o-processo"><i class="fa fa-check"></i><b>3.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html"><i class="fa fa-check"></i><b>4</b> Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#o-que-é-uma-máquina-a-laser"><i class="fa fa-check"></i><b>4.1</b> O Que é uma Máquina a Laser</a></li>
+<li class="chapter" data-level="4.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#como-funciona-a-máquina-a-laser"><i class="fa fa-check"></i><b>4.2</b> Como Funciona a Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#estrutura-e-componentes-1"><i class="fa fa-check"></i><b>4.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#experiência-prática-projeto-da-caixa"><i class="fa fa-check"></i><b>4.3</b> Experiência Prática: Projeto da Caixa</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#buscando-o-projeto-1"><i class="fa fa-check"></i><b>4.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="4.3.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#preparação-do-arquivo-1"><i class="fa fa-check"></i><b>4.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="4.3.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#processo-de-corte"><i class="fa fa-check"></i><b>4.3.3</b> Processo de Corte</a></li>
+<li class="chapter" data-level="4.3.4" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#montagem-da-caixa"><i class="fa fa-check"></i><b>4.3.4</b> Montagem da Caixa</a></li>
+<li class="chapter" data-level="4.3.5" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#resultado-final-1"><i class="fa fa-check"></i><b>4.3.5</b> Resultado Final</a></li>
+<li class="chapter" data-level="4.3.6" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#reflexão-sobre-o-processo-1"><i class="fa fa-check"></i><b>4.3.6</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="plotter.html"><a href="plotter.html"><i class="fa fa-check"></i><b>5</b> Plotter</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="plotter.html"><a href="plotter.html#o-que-é-uma-plotter"><i class="fa fa-check"></i><b>5.1</b> O Que é uma Plotter</a></li>
+<li class="chapter" data-level="5.2" data-path="plotter.html"><a href="plotter.html#como-funciona-a-plotter"><i class="fa fa-check"></i><b>5.2</b> Como Funciona a Plotter</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="plotter.html"><a href="plotter.html#estrutura-e-componentes-2"><i class="fa fa-check"></i><b>5.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="plotter.html"><a href="plotter.html#experiência-prática-projeto-do-símbolo-targaryen"><i class="fa fa-check"></i><b>5.3</b> Experiência Prática: Projeto do Símbolo Targaryen</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="plotter.html"><a href="plotter.html#recebendo-as-instruções"><i class="fa fa-check"></i><b>5.3.1</b> Recebendo as Instruções</a></li>
+<li class="chapter" data-level="5.3.2" data-path="plotter.html"><a href="plotter.html#escolhendo-e-preparando-o-desenho"><i class="fa fa-check"></i><b>5.3.2</b> Escolhendo e Preparando o Desenho</a></li>
+<li class="chapter" data-level="5.3.3" data-path="plotter.html"><a href="plotter.html#processo-de-desenho"><i class="fa fa-check"></i><b>5.3.3</b> Processo de Desenho</a></li>
+<li class="chapter" data-level="5.3.4" data-path="plotter.html"><a href="plotter.html#resultado-final-2"><i class="fa fa-check"></i><b>5.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="5.3.5" data-path="plotter.html"><a href="plotter.html#reflexão-sobre-o-processo-2"><i class="fa fa-check"></i><b>5.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="arduino.html"><a href="arduino.html"><i class="fa fa-check"></i><b>6</b> Arduino</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="arduino.html"><a href="arduino.html#o-que-é-o-arduino"><i class="fa fa-check"></i><b>6.1</b> O Que é o Arduino</a></li>
+<li class="chapter" data-level="6.2" data-path="arduino.html"><a href="arduino.html#para-que-serve-o-arduino"><i class="fa fa-check"></i><b>6.2</b> Para Que Serve o Arduino</a></li>
+<li class="chapter" data-level="6.3" data-path="arduino.html"><a href="arduino.html#programação-no-arduino"><i class="fa fa-check"></i><b>6.3</b> Programação no Arduino</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="arduino.html"><a href="arduino.html#estrutura-básica-de-um-programa-arduino"><i class="fa fa-check"></i><b>6.3.1</b> Estrutura Básica de um Programa Arduino</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="arduino.html"><a href="arduino.html#tipos-de-arduino"><i class="fa fa-check"></i><b>6.4</b> Tipos de Arduino</a></li>
+<li class="chapter" data-level="6.5" data-path="arduino.html"><a href="arduino.html#bancada-de-sistema-de-controle"><i class="fa fa-check"></i><b>6.5</b> Bancada de Sistema de Controle</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="arduino.html"><a href="arduino.html#apresentação-da-bancada"><i class="fa fa-check"></i><b>6.5.1</b> Apresentação da Bancada</a></li>
+<li class="chapter" data-level="6.5.2" data-path="arduino.html"><a href="arduino.html#explicação-da-bancada"><i class="fa fa-check"></i><b>6.5.2</b> Explicação da Bancada</a></li>
+<li class="chapter" data-level="6.5.3" data-path="arduino.html"><a href="arduino.html#foto-da-bancada"><i class="fa fa-check"></i><b>6.5.3</b> Foto da Bancada</a></li>
+<li class="chapter" data-level="6.5.4" data-path="arduino.html"><a href="arduino.html#reflexão-sobre-o-processo-3"><i class="fa fa-check"></i><b>6.5.4</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html"><i class="fa fa-check"></i><b>7</b> Processo de Corrosão</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#o-que-é-a-corrosão"><i class="fa fa-check"></i><b>7.1</b> O Que é a Corrosão</a></li>
+<li class="chapter" data-level="7.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#como-funciona-a-corrosão"><i class="fa fa-check"></i><b>7.2</b> Como Funciona a Corrosão</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#materiais-e-ferramentas"><i class="fa fa-check"></i><b>7.2.1</b> Materiais e Ferramentas</a></li>
+<li class="chapter" data-level="7.2.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#monitoramento-e-ajustes"><i class="fa fa-check"></i><b>7.2.2</b> Monitoramento e Ajustes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#experiência-prática-fabricação-de-um-circuito"><i class="fa fa-check"></i><b>7.3</b> Experiência Prática: Fabricação de um Circuito</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#recebendo-as-instruções-1"><i class="fa fa-check"></i><b>7.3.1</b> Recebendo as Instruções</a></li>
+<li class="chapter" data-level="7.3.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#aplicando-a-máscara-e-realizando-a-corrosão"><i class="fa fa-check"></i><b>7.3.2</b> Aplicando a Máscara e Realizando a Corrosão</a></li>
+<li class="chapter" data-level="7.3.3" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#resultado-final-3"><i class="fa fa-check"></i><b>7.3.3</b> Resultado Final</a></li>
+<li class="chapter" data-level="7.3.4" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#reflexão-sobre-o-processo-4"><i class="fa fa-check"></i><b>7.3.4</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="soldagem.html"><a href="soldagem.html"><i class="fa fa-check"></i><b>8</b> Soldagem</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="soldagem.html"><a href="soldagem.html#o-processo-de-soldagem"><i class="fa fa-check"></i><b>8.1</b> O Processo de Soldagem</a></li>
+<li class="chapter" data-level="8.2" data-path="soldagem.html"><a href="soldagem.html#o-material-estanho"><i class="fa fa-check"></i><b>8.2</b> O Material: Estanho</a></li>
+<li class="chapter" data-level="8.3" data-path="soldagem.html"><a href="soldagem.html#a-estação-de-solda"><i class="fa fa-check"></i><b>8.3</b> A Estação de Solda</a></li>
+<li class="chapter" data-level="8.4" data-path="soldagem.html"><a href="soldagem.html#a-prática-de-soldagem"><i class="fa fa-check"></i><b>8.4</b> A Prática de Soldagem</a></li>
+<li class="chapter" data-level="8.5" data-path="soldagem.html"><a href="soldagem.html#reflexão-sobre-o-processo-5"><i class="fa fa-check"></i><b>8.5</b> 8.5 Reflexão Sobre o Processo</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="transmissor-am.html"><a href="transmissor-am.html"><i class="fa fa-check"></i><b>9</b> Transmissor AM</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="transmissor-am.html"><a href="transmissor-am.html#o-que-é-um-transmissor-am"><i class="fa fa-check"></i><b>9.1</b> O que é um Transmissor AM</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="transmissor-am.html"><a href="transmissor-am.html#princípios-de-funcionamento"><i class="fa fa-check"></i><b>9.1.1</b> Princípios de Funcionamento</a></li>
+<li class="chapter" data-level="9.1.2" data-path="transmissor-am.html"><a href="transmissor-am.html#vantagens-e-desvantagens"><i class="fa fa-check"></i><b>9.1.2</b> Vantagens e Desvantagens</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="transmissor-am.html"><a href="transmissor-am.html#descrição-do-projeto"><i class="fa fa-check"></i><b>9.2</b> Descrição do Projeto</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="transmissor-am.html"><a href="transmissor-am.html#componentes-e-materiais"><i class="fa fa-check"></i><b>9.2.1</b> Componentes e Materiais</a></li>
+<li class="chapter" data-level="9.2.2" data-path="transmissor-am.html"><a href="transmissor-am.html#objetivo-do-projeto"><i class="fa fa-check"></i><b>9.2.2</b> Objetivo do Projeto</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="transmissor-am.html"><a href="transmissor-am.html#cálculos-e-simulação"><i class="fa fa-check"></i><b>9.3</b> Cálculos e Simulação</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="transmissor-am.html"><a href="transmissor-am.html#cálculos-teóricos"><i class="fa fa-check"></i><b>9.3.1</b> Cálculos Teóricos</a></li>
+<li class="chapter" data-level="9.3.2" data-path="transmissor-am.html"><a href="transmissor-am.html#simulação-no-ltspice"><i class="fa fa-check"></i><b>9.3.2</b> Simulação no LTSpice</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="transmissor-am.html"><a href="transmissor-am.html#montagem-e-teste-em-protoboard"><i class="fa fa-check"></i><b>9.4</b> Montagem e Teste em Protoboard</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="transmissor-am.html"><a href="transmissor-am.html#montagem-na-protoboard"><i class="fa fa-check"></i><b>9.4.1</b> Montagem na Protoboard</a></li>
+<li class="chapter" data-level="9.4.2" data-path="transmissor-am.html"><a href="transmissor-am.html#testes-com-osciloscópio"><i class="fa fa-check"></i><b>9.4.2</b> Testes com Osciloscópio</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="transmissor-am.html"><a href="transmissor-am.html#produção-do-circuito-impresso"><i class="fa fa-check"></i><b>9.5</b> Produção do Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-carregar-o-arquivo-no-candle"><i class="fa fa-check"></i><b>9.5.1</b> 1º Passo: Carregar o Arquivo no Candle</a></li>
+<li class="chapter" data-level="9.5.2" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-medição-de-desnível-da-placa"><i class="fa fa-check"></i><b>9.5.2</b> 2º Passo: Medição de Desnível da Placa</a></li>
+<li class="chapter" data-level="9.5.3" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-fresagem-das-trilhas"><i class="fa fa-check"></i><b>9.5.3</b> 3º Passo: Fresagem das Trilhas</a></li>
+<li class="chapter" data-level="9.5.4" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-produção-dos-furos"><i class="fa fa-check"></i><b>9.5.4</b> 4º Passo: Produção dos Furos</a></li>
+<li class="chapter" data-level="9.5.5" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-criação"><i class="fa fa-check"></i><b>9.5.5</b> 5º Passo: Criação</a></li>
+<li class="chapter" data-level="9.5.6" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-limpar-a-placa"><i class="fa fa-check"></i><b>9.5.6</b> 6º Passo: Limpar a placa</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="transmissor-am.html"><a href="transmissor-am.html#resultado-final-4"><i class="fa fa-check"></i><b>9.6</b> Resultado Final</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="transmissor-am.html"><a href="transmissor-am.html#foto-do-circuito-finalizado"><i class="fa fa-check"></i><b>9.6.1</b> Foto do Circuito Finalizado</a></li>
+<li class="chapter" data-level="9.6.2" data-path="transmissor-am.html"><a href="transmissor-am.html#visualização-do-sinal-no-osciloscópio"><i class="fa fa-check"></i><b>9.6.2</b> Visualização do Sinal no Osciloscópio</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="transmissor-am.html"><a href="transmissor-am.html#impacto-no-desenvolvimento-profissional"><i class="fa fa-check"></i><b>9.7</b> Impacto no Desenvolvimento Profissional</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fabricação Digital</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="máquina-a-laser" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Máquina a Laser<a href="máquina-a-laser.html#máquina-a-laser" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="o-que-é-uma-máquina-a-laser" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> O Que é uma Máquina a Laser<a href="máquina-a-laser.html#o-que-é-uma-máquina-a-laser" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A máquina a laser é uma tecnologia inovadora que utiliza um feixe de laser concentrado para cortar, gravar ou marcar materiais com alta precisão. As máquinas a laser são amplamente utilizadas em diversas indústrias devido à sua capacidade de realizar cortes complexos e detalhados, além de gravações precisas em uma variedade de materiais. Esta tecnologia tem aplicações em setores como a manufatura, a arquitetura, o design de produtos, a moda, e a joalheria, entre outros. A versatilidade e a precisão das máquinas a laser as tornam ferramentas indispensáveis em muitos processos de fabricação.</p>
+<p>As máquinas a laser começaram a ganhar popularidade na indústria a partir da década de 1970, impulsionadas pela necessidade de métodos mais precisos e eficientes de corte e gravação. Desde então, elas evoluíram significativamente, tornando-se mais acessíveis e eficientes, permitindo sua utilização em pequenas empresas e até mesmo em ambientes domésticos.</p>
+</div>
+<div id="como-funciona-a-máquina-a-laser" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Como Funciona a Máquina a Laser<a href="máquina-a-laser.html#como-funciona-a-máquina-a-laser" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="estrutura-e-componentes-1" class="section level3 hasAnchor" number="4.2.1">
+<h3><span class="header-section-number">4.2.1</span> Estrutura e Componentes<a href="máquina-a-laser.html#estrutura-e-componentes-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>As máquinas a laser operam através da emissão de um feixe de laser concentrado que é direcionado para a superfície do material a ser trabalhado. Os componentes principais de uma máquina a laser incluem a fonte de laser, os eixos de movimentação, os espelhos, a lente focalizadora e o sistema de controle.</p>
+<div id="fonte-de-laser" class="section level4 hasAnchor" number="4.2.1.1">
+<h4><span class="header-section-number">4.2.1.1</span> Fonte de Laser<a href="máquina-a-laser.html#fonte-de-laser" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A fonte de laser é o componente que gera o feixe de luz. Existem diferentes tipos de fontes de laser, incluindo laser CO2, laser de fibra e laser de diodo, cada uma adequada para diferentes tipos de materiais e aplicações. O laser CO2 é comumente usado para cortar e gravar materiais como madeira, acrílico, papel e couro.</p>
+</div>
+<div id="eixos-de-movimentação" class="section level4 hasAnchor" number="4.2.1.2">
+<h4><span class="header-section-number">4.2.1.2</span> Eixos de Movimentação<a href="máquina-a-laser.html#eixos-de-movimentação" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Assim como nas impressoras 3D, as máquinas a laser possuem eixos de movimentação que direcionam o feixe de laser para a localização correta no material. Os eixos X e Y controlam o movimento horizontal e vertical, enquanto o eixo Z pode ajustar a altura do feixe para focar em diferentes espessuras de material.</p>
+</div>
+<div id="espelhos-e-lente-focalizadora" class="section level4 hasAnchor" number="4.2.1.3">
+<h4><span class="header-section-number">4.2.1.3</span> Espelhos e Lente Focalizadora<a href="máquina-a-laser.html#espelhos-e-lente-focalizadora" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Os espelhos direcionam o feixe de laser da fonte até a lente focalizadora. A lente focalizadora concentra o feixe de laser em um ponto pequeno e preciso na superfície do material, permitindo cortes e gravações detalhadas.</p>
+</div>
+<div id="sistema-de-controle" class="section level4 hasAnchor" number="4.2.1.4">
+<h4><span class="header-section-number">4.2.1.4</span> Sistema de Controle<a href="máquina-a-laser.html#sistema-de-controle" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>O sistema de controle é responsável por interpretar o design digital e controlar o movimento dos eixos, a intensidade do laser e a posição do feixe. O software de controle permite importar arquivos de design e ajustar os parâmetros de corte e gravação conforme necessário.</p>
+</div>
+</div>
+</div>
+<div id="experiência-prática-projeto-da-caixa" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Experiência Prática: Projeto da Caixa<a href="máquina-a-laser.html#experiência-prática-projeto-da-caixa" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Durante o treinamento prático com a máquina a laser, desenvolvi um projeto que envolveu a criação de uma caixa utilizando o site <a href="https://pt.makercase.com/#/">MakerCase</a>. Abaixo, descrevo detalhadamente cada etapa do processo.</p>
+<div id="buscando-o-projeto-1" class="section level3 hasAnchor" number="4.3.1">
+<h3><span class="header-section-number">4.3.1</span> Buscando o Projeto<a href="máquina-a-laser.html#buscando-o-projeto-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O primeiro passo foi buscar um projeto de caixa no site MakerCase. Esta plataforma permite criar projetos personalizados de caixas ajustando dimensões, espessura do material e outros parâmetros. O site gera automaticamente o arquivo SVG necessário para a máquina a laser.</p>
+</div>
+<div id="preparação-do-arquivo-1" class="section level3 hasAnchor" number="4.3.2">
+<h3><span class="header-section-number">4.3.2</span> Preparação do Arquivo<a href="máquina-a-laser.html#preparação-do-arquivo-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Após ajustar as dimensões e características da caixa no MakerCase, baixei o arquivo SVG gerado pelo site e o importei para o software de controle da máquina a laser. No software, configurei diversos parâmetros essenciais para o corte, incluindo a região de trabalho e a velocidade de corte. Estes ajustes são cruciais para garantir que o material seja cortado de forma precisa e eficiente.</p>
+</div>
+<div id="processo-de-corte" class="section level3 hasAnchor" number="4.3.3">
+<h3><span class="header-section-number">4.3.3</span> Processo de Corte<a href="máquina-a-laser.html#processo-de-corte" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Primeiramente, ajustei a potência do laser para trabalhar com papelão, que é um material relativamente leve e fácil de cortar. Os valores de potência e velocidade necessários para diferentes materiais são frequentemente apresentados em uma tabela ao lado da máquina, fornecendo uma referência útil para diferentes tipos de trabalho.</p>
+<p>Além desses parâmetros, um aspecto crítico do processo é a distância ótima entre o material e o laser. Para ajustar corretamente essa distância, utilizei um gabarito, uma ferramenta indispensável para garantir a precisão do foco do laser. Conforme explicado pelo professor, o feixe de laser não é uma linha reta e tende a se dispersar. Portanto, encontrar a distância correta é fundamental para obter cortes limpos e precisos.</p>
+<p>A máquina possui controles específicos para ajustar esses parâmetros. Há botões dedicados para subir e descer o cabeçote do laser, permitindo um ajuste fino da altura. A potência do laser pode ser monitorada e ajustada através de um display digital na própria máquina, que exibe claramente os níveis de potência atuais. Essas funcionalidades são essenciais para garantir que o laser esteja operando nas condições ideais para o material em uso.</p>
+<p>Ao configurar a região de trabalho, precisei definir os limites da área onde o laser operaria, garantindo que o corte fosse realizado exatamente nas posições desejadas. A velocidade de corte também foi ajustada, equilibrando a rapidez do processo com a precisão necessária para o papelão, que, embora fácil de cortar, ainda requer atenção para evitar queimar ou danificar o material.</p>
+<img src="ajuste.jpg" style="display:block; margin:0 auto;;width:50.0%" />
+<center>
+Ajuste da região de trabalho.
+</center>
+<p>Esses ajustes são fundamentais para otimizar o desempenho da máquina a laser e garantir a qualidade do corte. Uma vez que todos os parâmetros estavam devidamente configurados, iniciei o processo de corte. A máquina a laser começou a operar, movendo o feixe de laser conforme as instruções do arquivo SVG, cortando as peças da caixa com precisão milimétrica.</p>
+Durante o corte, monitorei continuamente o progresso e fiz ajustes finos conforme necessário. A observação constante é importante para garantir que o laser esteja cortando corretamente e que não haja problemas, como falhas no corte ou desalinhos. Qualquer desvio pode ser corrigido rapidamente, ajustando a altura do laser ou a potência conforme necessário.
+<img src="corte.jpg" style="display:block; margin:0 auto;;width:30.0%" />
+<center>
+Monitorando o processo.
+</center>
+</div>
+<div id="montagem-da-caixa" class="section level3 hasAnchor" number="4.3.4">
+<h3><span class="header-section-number">4.3.4</span> Montagem da Caixa<a href="máquina-a-laser.html#montagem-da-caixa" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Após o corte, todas as peças da caixa estavam prontas para montagem. As peças cortadas com precisão se encaixavam perfeitamente, facilitando a montagem sem a necessidade de adesivos ou parafusos. A experiência de ver o projeto digital se transformar em um objeto físico foi extremamente gratificante.</p>
+</div>
+<div id="resultado-final-1" class="section level3 hasAnchor" number="4.3.5">
+<h3><span class="header-section-number">4.3.5</span> Resultado Final<a href="máquina-a-laser.html#resultado-final-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O resultado final foi uma caixa bem construída, com cortes limpos e com . A utilização da máquina a laser permitiu criar um objeto funcional e esteticamente agradável de forma rápida e eficiente. Abaixo, uma foto do resultado final.</p>
+<img src="caixafinal.jpg" style="display:block; margin:0 auto;;width:50.0%" />
+<center>
+Resultado final.
+</center>
+</div>
+<div id="reflexão-sobre-o-processo-1" class="section level3 hasAnchor" number="4.3.6">
+<h3><span class="header-section-number">4.3.6</span> Reflexão Sobre o Processo<a href="máquina-a-laser.html#reflexão-sobre-o-processo-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A experiência de ver o projeto digital se transformar em peças físicas foi extremamente satisfatória. Cada peça cortada saiu conforme o planejado, com bordas limpas e precisão nas dimensões, facilitando a montagem posterior. Essa fase do processo destaca a importância do planejamento e da configuração precisa, demonstrando como cada detalhe contribui para o sucesso do projeto final.</p>
+<p>A máquina a laser é uma tecnologia poderosa que oferece inúmeras possibilidades de criação e inovação. Desde a concepção do projeto até a finalização do corte, cada etapa do processo proporciona uma oportunidade única de aprendizado e desenvolvimento. A realização do projeto da caixa foi uma demonstração prática de como a teoria e a prática se complementam no campo da fabricação digital.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="impressão-3d.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="plotter.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/04-laser.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

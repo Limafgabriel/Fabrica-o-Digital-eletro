@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 8 Soldagem | Fabricação Digital</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 8 Soldagem | Fabricação Digital" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 8 Soldagem | Fabricação Digital" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Gabriel Lima Ferreira" />
+
+
+<meta name="date" content="2024-07-09" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="processo-de-corrosão.html"/>
+<link rel="next" href="transmissor-am.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introdução</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#objetivos-da-disciplina"><i class="fa fa-check"></i><b>1.1</b> Objetivos da Disciplina</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#conteúdo-programático"><i class="fa fa-check"></i><b>1.2</b> Conteúdo Programático</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#importância-da-fabricação-digital"><i class="fa fa-check"></i><b>1.3</b> Importância da Fabricação Digital</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html"><i class="fa fa-check"></i><b>2</b> Máquinas CNC</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#origens"><i class="fa fa-check"></i><b>2.1</b> Origens</a></li>
+<li class="chapter" data-level="2.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#terminologias"><i class="fa fa-check"></i><b>2.2</b> Terminologias</a></li>
+<li class="chapter" data-level="2.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#configurações-de-máquina"><i class="fa fa-check"></i><b>2.3</b> Configurações de Máquina</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#operação"><i class="fa fa-check"></i><b>2.3.1</b> Operação</a></li>
+<li class="chapter" data-level="2.3.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#estrutura"><i class="fa fa-check"></i><b>2.3.2</b> Estrutura</a></li>
+<li class="chapter" data-level="2.3.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#guias-e-suportes"><i class="fa fa-check"></i><b>2.3.3</b> Guias e Suportes</a></li>
+<li class="chapter" data-level="2.3.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#motores"><i class="fa fa-check"></i><b>2.3.4</b> Motores</a></li>
+<li class="chapter" data-level="2.3.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#acopladores"><i class="fa fa-check"></i><b>2.3.5</b> Acopladores</a></li>
+<li class="chapter" data-level="2.3.6" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#transmissão"><i class="fa fa-check"></i><b>2.3.6</b> Transmissão</a></li>
+<li class="chapter" data-level="2.3.7" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#eletrônica"><i class="fa fa-check"></i><b>2.3.7</b> Eletrônica</a></li>
+<li class="chapter" data-level="2.3.8" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#software"><i class="fa fa-check"></i><b>2.3.8</b> Software</a></li>
+<li class="chapter" data-level="2.3.9" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#ferramenta"><i class="fa fa-check"></i><b>2.3.9</b> Ferramenta</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#segurança"><i class="fa fa-check"></i><b>2.4</b> Segurança</a></li>
+<li class="chapter" data-level="2.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#fluxo-de-trabalho"><i class="fa fa-check"></i><b>2.5</b> Fluxo de Trabalho</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="impressão-3d.html"><a href="impressão-3d.html"><i class="fa fa-check"></i><b>3</b> Impressão 3D</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="impressão-3d.html"><a href="impressão-3d.html#o-que-é-impressora-3d"><i class="fa fa-check"></i><b>3.1</b> O Que é Impressora 3D</a></li>
+<li class="chapter" data-level="3.2" data-path="impressão-3d.html"><a href="impressão-3d.html#como-funciona-a-impressora-3d"><i class="fa fa-check"></i><b>3.2</b> Como Funciona a Impressora 3D</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="impressão-3d.html"><a href="impressão-3d.html#estrutura-e-componentes"><i class="fa fa-check"></i><b>3.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="impressão-3d.html"><a href="impressão-3d.html#experiência-prática-projeto-do-dragão-de-game-of-thrones"><i class="fa fa-check"></i><b>3.3</b> Experiência Prática: Projeto do Dragão de Game of Thrones</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="impressão-3d.html"><a href="impressão-3d.html#buscando-o-projeto"><i class="fa fa-check"></i><b>3.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="3.3.2" data-path="impressão-3d.html"><a href="impressão-3d.html#preparação-do-arquivo"><i class="fa fa-check"></i><b>3.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="3.3.3" data-path="impressão-3d.html"><a href="impressão-3d.html#processo-de-impressão"><i class="fa fa-check"></i><b>3.3.3</b> Processo de Impressão</a></li>
+<li class="chapter" data-level="3.3.4" data-path="impressão-3d.html"><a href="impressão-3d.html#resultado-final"><i class="fa fa-check"></i><b>3.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="3.3.5" data-path="impressão-3d.html"><a href="impressão-3d.html#reflexão-sobre-o-processo"><i class="fa fa-check"></i><b>3.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html"><i class="fa fa-check"></i><b>4</b> Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#o-que-é-uma-máquina-a-laser"><i class="fa fa-check"></i><b>4.1</b> O Que é uma Máquina a Laser</a></li>
+<li class="chapter" data-level="4.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#como-funciona-a-máquina-a-laser"><i class="fa fa-check"></i><b>4.2</b> Como Funciona a Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#estrutura-e-componentes-1"><i class="fa fa-check"></i><b>4.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#experiência-prática-projeto-da-caixa"><i class="fa fa-check"></i><b>4.3</b> Experiência Prática: Projeto da Caixa</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#buscando-o-projeto-1"><i class="fa fa-check"></i><b>4.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="4.3.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#preparação-do-arquivo-1"><i class="fa fa-check"></i><b>4.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="4.3.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#processo-de-corte"><i class="fa fa-check"></i><b>4.3.3</b> Processo de Corte</a></li>
+<li class="chapter" data-level="4.3.4" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#montagem-da-caixa"><i class="fa fa-check"></i><b>4.3.4</b> Montagem da Caixa</a></li>
+<li class="chapter" data-level="4.3.5" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#resultado-final-1"><i class="fa fa-check"></i><b>4.3.5</b> Resultado Final</a></li>
+<li class="chapter" data-level="4.3.6" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#reflexão-sobre-o-processo-1"><i class="fa fa-check"></i><b>4.3.6</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="plotter.html"><a href="plotter.html"><i class="fa fa-check"></i><b>5</b> Plotter</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="plotter.html"><a href="plotter.html#o-que-é-uma-plotter"><i class="fa fa-check"></i><b>5.1</b> O Que é uma Plotter</a></li>
+<li class="chapter" data-level="5.2" data-path="plotter.html"><a href="plotter.html#como-funciona-a-plotter"><i class="fa fa-check"></i><b>5.2</b> Como Funciona a Plotter</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="plotter.html"><a href="plotter.html#estrutura-e-componentes-2"><i class="fa fa-check"></i><b>5.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="plotter.html"><a href="plotter.html#experiência-prática-projeto-do-símbolo-targaryen"><i class="fa fa-check"></i><b>5.3</b> Experiência Prática: Projeto do Símbolo Targaryen</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="plotter.html"><a href="plotter.html#recebendo-as-instruções"><i class="fa fa-check"></i><b>5.3.1</b> Recebendo as Instruções</a></li>
+<li class="chapter" data-level="5.3.2" data-path="plotter.html"><a href="plotter.html#escolhendo-e-preparando-o-desenho"><i class="fa fa-check"></i><b>5.3.2</b> Escolhendo e Preparando o Desenho</a></li>
+<li class="chapter" data-level="5.3.3" data-path="plotter.html"><a href="plotter.html#processo-de-desenho"><i class="fa fa-check"></i><b>5.3.3</b> Processo de Desenho</a></li>
+<li class="chapter" data-level="5.3.4" data-path="plotter.html"><a href="plotter.html#resultado-final-2"><i class="fa fa-check"></i><b>5.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="5.3.5" data-path="plotter.html"><a href="plotter.html#reflexão-sobre-o-processo-2"><i class="fa fa-check"></i><b>5.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="arduino.html"><a href="arduino.html"><i class="fa fa-check"></i><b>6</b> Arduino</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="arduino.html"><a href="arduino.html#o-que-é-o-arduino"><i class="fa fa-check"></i><b>6.1</b> O Que é o Arduino</a></li>
+<li class="chapter" data-level="6.2" data-path="arduino.html"><a href="arduino.html#para-que-serve-o-arduino"><i class="fa fa-check"></i><b>6.2</b> Para Que Serve o Arduino</a></li>
+<li class="chapter" data-level="6.3" data-path="arduino.html"><a href="arduino.html#programação-no-arduino"><i class="fa fa-check"></i><b>6.3</b> Programação no Arduino</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="arduino.html"><a href="arduino.html#estrutura-básica-de-um-programa-arduino"><i class="fa fa-check"></i><b>6.3.1</b> Estrutura Básica de um Programa Arduino</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="arduino.html"><a href="arduino.html#tipos-de-arduino"><i class="fa fa-check"></i><b>6.4</b> Tipos de Arduino</a></li>
+<li class="chapter" data-level="6.5" data-path="arduino.html"><a href="arduino.html#bancada-de-sistema-de-controle"><i class="fa fa-check"></i><b>6.5</b> Bancada de Sistema de Controle</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="arduino.html"><a href="arduino.html#apresentação-da-bancada"><i class="fa fa-check"></i><b>6.5.1</b> Apresentação da Bancada</a></li>
+<li class="chapter" data-level="6.5.2" data-path="arduino.html"><a href="arduino.html#explicação-da-bancada"><i class="fa fa-check"></i><b>6.5.2</b> Explicação da Bancada</a></li>
+<li class="chapter" data-level="6.5.3" data-path="arduino.html"><a href="arduino.html#foto-da-bancada"><i class="fa fa-check"></i><b>6.5.3</b> Foto da Bancada</a></li>
+<li class="chapter" data-level="6.5.4" data-path="arduino.html"><a href="arduino.html#reflexão-sobre-o-processo-3"><i class="fa fa-check"></i><b>6.5.4</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html"><i class="fa fa-check"></i><b>7</b> Processo de Corrosão</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#o-que-é-a-corrosão"><i class="fa fa-check"></i><b>7.1</b> O Que é a Corrosão</a></li>
+<li class="chapter" data-level="7.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#como-funciona-a-corrosão"><i class="fa fa-check"></i><b>7.2</b> Como Funciona a Corrosão</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#materiais-e-ferramentas"><i class="fa fa-check"></i><b>7.2.1</b> Materiais e Ferramentas</a></li>
+<li class="chapter" data-level="7.2.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#monitoramento-e-ajustes"><i class="fa fa-check"></i><b>7.2.2</b> Monitoramento e Ajustes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#experiência-prática-fabricação-de-um-circuito"><i class="fa fa-check"></i><b>7.3</b> Experiência Prática: Fabricação de um Circuito</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#recebendo-as-instruções-1"><i class="fa fa-check"></i><b>7.3.1</b> Recebendo as Instruções</a></li>
+<li class="chapter" data-level="7.3.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#aplicando-a-máscara-e-realizando-a-corrosão"><i class="fa fa-check"></i><b>7.3.2</b> Aplicando a Máscara e Realizando a Corrosão</a></li>
+<li class="chapter" data-level="7.3.3" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#resultado-final-3"><i class="fa fa-check"></i><b>7.3.3</b> Resultado Final</a></li>
+<li class="chapter" data-level="7.3.4" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#reflexão-sobre-o-processo-4"><i class="fa fa-check"></i><b>7.3.4</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="soldagem.html"><a href="soldagem.html"><i class="fa fa-check"></i><b>8</b> Soldagem</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="soldagem.html"><a href="soldagem.html#o-processo-de-soldagem"><i class="fa fa-check"></i><b>8.1</b> O Processo de Soldagem</a></li>
+<li class="chapter" data-level="8.2" data-path="soldagem.html"><a href="soldagem.html#o-material-estanho"><i class="fa fa-check"></i><b>8.2</b> O Material: Estanho</a></li>
+<li class="chapter" data-level="8.3" data-path="soldagem.html"><a href="soldagem.html#a-estação-de-solda"><i class="fa fa-check"></i><b>8.3</b> A Estação de Solda</a></li>
+<li class="chapter" data-level="8.4" data-path="soldagem.html"><a href="soldagem.html#a-prática-de-soldagem"><i class="fa fa-check"></i><b>8.4</b> A Prática de Soldagem</a></li>
+<li class="chapter" data-level="8.5" data-path="soldagem.html"><a href="soldagem.html#reflexão-sobre-o-processo-5"><i class="fa fa-check"></i><b>8.5</b> 8.5 Reflexão Sobre o Processo</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="transmissor-am.html"><a href="transmissor-am.html"><i class="fa fa-check"></i><b>9</b> Transmissor AM</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="transmissor-am.html"><a href="transmissor-am.html#o-que-é-um-transmissor-am"><i class="fa fa-check"></i><b>9.1</b> O que é um Transmissor AM</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="transmissor-am.html"><a href="transmissor-am.html#princípios-de-funcionamento"><i class="fa fa-check"></i><b>9.1.1</b> Princípios de Funcionamento</a></li>
+<li class="chapter" data-level="9.1.2" data-path="transmissor-am.html"><a href="transmissor-am.html#vantagens-e-desvantagens"><i class="fa fa-check"></i><b>9.1.2</b> Vantagens e Desvantagens</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="transmissor-am.html"><a href="transmissor-am.html#descrição-do-projeto"><i class="fa fa-check"></i><b>9.2</b> Descrição do Projeto</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="transmissor-am.html"><a href="transmissor-am.html#componentes-e-materiais"><i class="fa fa-check"></i><b>9.2.1</b> Componentes e Materiais</a></li>
+<li class="chapter" data-level="9.2.2" data-path="transmissor-am.html"><a href="transmissor-am.html#objetivo-do-projeto"><i class="fa fa-check"></i><b>9.2.2</b> Objetivo do Projeto</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="transmissor-am.html"><a href="transmissor-am.html#cálculos-e-simulação"><i class="fa fa-check"></i><b>9.3</b> Cálculos e Simulação</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="transmissor-am.html"><a href="transmissor-am.html#cálculos-teóricos"><i class="fa fa-check"></i><b>9.3.1</b> Cálculos Teóricos</a></li>
+<li class="chapter" data-level="9.3.2" data-path="transmissor-am.html"><a href="transmissor-am.html#simulação-no-ltspice"><i class="fa fa-check"></i><b>9.3.2</b> Simulação no LTSpice</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="transmissor-am.html"><a href="transmissor-am.html#montagem-e-teste-em-protoboard"><i class="fa fa-check"></i><b>9.4</b> Montagem e Teste em Protoboard</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="transmissor-am.html"><a href="transmissor-am.html#montagem-na-protoboard"><i class="fa fa-check"></i><b>9.4.1</b> Montagem na Protoboard</a></li>
+<li class="chapter" data-level="9.4.2" data-path="transmissor-am.html"><a href="transmissor-am.html#testes-com-osciloscópio"><i class="fa fa-check"></i><b>9.4.2</b> Testes com Osciloscópio</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="transmissor-am.html"><a href="transmissor-am.html#produção-do-circuito-impresso"><i class="fa fa-check"></i><b>9.5</b> Produção do Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-carregar-o-arquivo-no-candle"><i class="fa fa-check"></i><b>9.5.1</b> 1º Passo: Carregar o Arquivo no Candle</a></li>
+<li class="chapter" data-level="9.5.2" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-medição-de-desnível-da-placa"><i class="fa fa-check"></i><b>9.5.2</b> 2º Passo: Medição de Desnível da Placa</a></li>
+<li class="chapter" data-level="9.5.3" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-fresagem-das-trilhas"><i class="fa fa-check"></i><b>9.5.3</b> 3º Passo: Fresagem das Trilhas</a></li>
+<li class="chapter" data-level="9.5.4" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-produção-dos-furos"><i class="fa fa-check"></i><b>9.5.4</b> 4º Passo: Produção dos Furos</a></li>
+<li class="chapter" data-level="9.5.5" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-criação"><i class="fa fa-check"></i><b>9.5.5</b> 5º Passo: Criação</a></li>
+<li class="chapter" data-level="9.5.6" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-limpar-a-placa"><i class="fa fa-check"></i><b>9.5.6</b> 6º Passo: Limpar a placa</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="transmissor-am.html"><a href="transmissor-am.html#resultado-final-4"><i class="fa fa-check"></i><b>9.6</b> Resultado Final</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="transmissor-am.html"><a href="transmissor-am.html#foto-do-circuito-finalizado"><i class="fa fa-check"></i><b>9.6.1</b> Foto do Circuito Finalizado</a></li>
+<li class="chapter" data-level="9.6.2" data-path="transmissor-am.html"><a href="transmissor-am.html#visualização-do-sinal-no-osciloscópio"><i class="fa fa-check"></i><b>9.6.2</b> Visualização do Sinal no Osciloscópio</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="transmissor-am.html"><a href="transmissor-am.html#impacto-no-desenvolvimento-profissional"><i class="fa fa-check"></i><b>9.7</b> Impacto no Desenvolvimento Profissional</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fabricação Digital</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="soldagem" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Chapter 8</span> Soldagem<a href="soldagem.html#soldagem" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="o-processo-de-soldagem" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> O Processo de Soldagem<a href="soldagem.html#o-processo-de-soldagem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A soldagem é um processo fundamental na eletrônica, permitindo a união de componentes eletrônicos em uma placa de circuito impresso (PCI). Utiliza-se um material fusível, conhecido como solda, para formar a ligação entre os componentes e a placa. A solda é normalmente feita de estanho e chumbo, embora atualmente, devido a regulamentações ambientais, soldas sem chumbo, compostas de estanho e outros metais como cobre e prata, sejam mais comuns.</p>
+<p>O processo de soldagem consiste em aquecer a junção a ser soldada com um ferro de solda até uma temperatura em que a solda derreta e forme uma conexão sólida e eletricamente condutiva quando resfriada. Este processo requer precisão e prática para garantir conexões fortes e duráveis sem causar danos aos componentes ou à placa.</p>
+</div>
+<div id="o-material-estanho" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> O Material: Estanho<a href="soldagem.html#o-material-estanho" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>O estanho é o principal componente da solda, escolhido por sua baixa temperatura de fusão e boas propriedades de condução elétrica. A solda de estanho-chumbo era amplamente utilizada devido à sua facilidade de uso e custo efetivo. Contudo, devido a preocupações ambientais e de saúde, a indústria eletrônica tem migrado para soldas sem chumbo, compostas de estanho e outros metais, que oferecem uma alternativa mais segura e ecologicamente correta.</p>
+</div>
+<div id="a-estação-de-solda" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> A Estação de Solda<a href="soldagem.html#a-estação-de-solda" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A estação de solda é uma ferramenta essencial para o processo de soldagem, proporcionando um controle preciso da temperatura do ferro de solda. Uma boa estação de solda permite ajustar a temperatura conforme necessário para diferentes tipos de solda e componentes, garantindo soldagens de alta qualidade e evitando danos causados por temperaturas excessivas.</p>
+<img src="esta%C3%A7%C3%A3o.jpg" style="display:block; margin:0 auto;;width:30.0%" height="300" />
+<center>
+Estação de Solda.
+</center>
+</div>
+<div id="a-prática-de-soldagem" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> A Prática de Soldagem<a href="soldagem.html#a-prática-de-soldagem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Durante o treinamento, tive a oportunidade de praticar soldagem, o que incluiu aprender a técnica de soldar componentes em uma placa de circuito impresso e também a habilidade de remover componentes danificados ou defeituosos da placa.</p>
+<p>A prática começou com a preparação da estação de solda, ajustando a temperatura para o nível apropriado. Em seguida, com o ferro de solda aquecido, apliquei a solda de estanho nas junções dos componentes com a placa, formando conexões sólidas e duráveis.</p>
+<img src="soldando.jpg" style="display:block; margin:0 auto;;width:50.0%" height="300" />
+<center>
+Prática de Soldagem.
+</center>
+<p>Além disso, aprendi a remover componentes utilizando técnicas adequadas para evitar danos à placa ou aos próprios componentes. Esta experiência foi valiosa para desenvolver habilidades manuais precisas e compreender a importância de cada etapa no processo de soldagem.</p>
+<img src="remo%C3%A7%C3%A3o.jpg" style="display:block; margin:0 auto;;width:30.0%" height="300" />
+<center>
+Remoção da solda.
+</center>
+</div>
+<div id="reflexão-sobre-o-processo-5" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> 8.5 Reflexão Sobre o Processo<a href="soldagem.html#reflexão-sobre-o-processo-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A experiência de soldagem no laboratório foi extremamente enriquecedora. Aprender a manusear a estação de solda, aplicar corretamente a solda de estanho, e remover componentes danificados, proporcionou uma compreensão prática e detalhada deste processo essencial na eletrônica. A prática constante ajudou a melhorar minha precisão e confiança na realização de soldagens de qualidade, fundamentais para o desenvolvimento e reparo de circuitos eletrônicos.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="processo-de-corrosão.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="transmissor-am.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/08-solda.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

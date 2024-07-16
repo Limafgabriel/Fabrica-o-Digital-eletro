@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Impressão 3D | Fabricação Digital</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Impressão 3D | Fabricação Digital" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Impressão 3D | Fabricação Digital" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Gabriel Lima Ferreira" />
+
+
+<meta name="date" content="2024-07-10" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="máquinas-cnc.html"/>
+<link rel="next" href="máquina-a-laser.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> url: your book url like https://bookdown.org/yihui/bookdown</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#objetivos-da-disciplina"><i class="fa fa-check"></i><b>1.1</b> Objetivos da Disciplina</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#conteúdo-programático"><i class="fa fa-check"></i><b>1.2</b> Conteúdo Programático</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#importância-da-fabricação-digital"><i class="fa fa-check"></i><b>1.3</b> Importância da Fabricação Digital</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html"><i class="fa fa-check"></i><b>2</b> Máquinas CNC</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#origens"><i class="fa fa-check"></i><b>2.1</b> Origens</a></li>
+<li class="chapter" data-level="2.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#terminologias"><i class="fa fa-check"></i><b>2.2</b> Terminologias</a></li>
+<li class="chapter" data-level="2.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#configurações-de-máquina"><i class="fa fa-check"></i><b>2.3</b> Configurações de Máquina</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#operação"><i class="fa fa-check"></i><b>2.3.1</b> Operação</a></li>
+<li class="chapter" data-level="2.3.2" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#estrutura"><i class="fa fa-check"></i><b>2.3.2</b> Estrutura</a></li>
+<li class="chapter" data-level="2.3.3" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#guias-e-suportes"><i class="fa fa-check"></i><b>2.3.3</b> Guias e Suportes</a></li>
+<li class="chapter" data-level="2.3.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#motores"><i class="fa fa-check"></i><b>2.3.4</b> Motores</a></li>
+<li class="chapter" data-level="2.3.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#acopladores"><i class="fa fa-check"></i><b>2.3.5</b> Acopladores</a></li>
+<li class="chapter" data-level="2.3.6" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#transmissão"><i class="fa fa-check"></i><b>2.3.6</b> Transmissão</a></li>
+<li class="chapter" data-level="2.3.7" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#eletrônica"><i class="fa fa-check"></i><b>2.3.7</b> Eletrônica</a></li>
+<li class="chapter" data-level="2.3.8" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#software"><i class="fa fa-check"></i><b>2.3.8</b> Software</a></li>
+<li class="chapter" data-level="2.3.9" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#ferramenta"><i class="fa fa-check"></i><b>2.3.9</b> Ferramenta</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#segurança"><i class="fa fa-check"></i><b>2.4</b> Segurança</a></li>
+<li class="chapter" data-level="2.5" data-path="máquinas-cnc.html"><a href="máquinas-cnc.html#fluxo-de-trabalho"><i class="fa fa-check"></i><b>2.5</b> Fluxo de Trabalho</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="impressão-3d.html"><a href="impressão-3d.html"><i class="fa fa-check"></i><b>3</b> Impressão 3D</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="impressão-3d.html"><a href="impressão-3d.html#o-que-é-impressora-3d"><i class="fa fa-check"></i><b>3.1</b> O Que é Impressora 3D</a></li>
+<li class="chapter" data-level="3.2" data-path="impressão-3d.html"><a href="impressão-3d.html#como-funciona-a-impressora-3d"><i class="fa fa-check"></i><b>3.2</b> Como Funciona a Impressora 3D</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="impressão-3d.html"><a href="impressão-3d.html#estrutura-e-componentes"><i class="fa fa-check"></i><b>3.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="impressão-3d.html"><a href="impressão-3d.html#experiência-prática-projeto-do-dragão-de-game-of-thrones"><i class="fa fa-check"></i><b>3.3</b> Experiência Prática: Projeto do Dragão de Game of Thrones</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="impressão-3d.html"><a href="impressão-3d.html#buscando-o-projeto"><i class="fa fa-check"></i><b>3.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="3.3.2" data-path="impressão-3d.html"><a href="impressão-3d.html#preparação-do-arquivo"><i class="fa fa-check"></i><b>3.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="3.3.3" data-path="impressão-3d.html"><a href="impressão-3d.html#processo-de-impressão"><i class="fa fa-check"></i><b>3.3.3</b> Processo de Impressão</a></li>
+<li class="chapter" data-level="3.3.4" data-path="impressão-3d.html"><a href="impressão-3d.html#resultado-final"><i class="fa fa-check"></i><b>3.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="3.3.5" data-path="impressão-3d.html"><a href="impressão-3d.html#reflexão-sobre-o-processo"><i class="fa fa-check"></i><b>3.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html"><i class="fa fa-check"></i><b>4</b> Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#o-que-é-uma-máquina-a-laser"><i class="fa fa-check"></i><b>4.1</b> O Que é uma Máquina a Laser</a></li>
+<li class="chapter" data-level="4.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#como-funciona-a-máquina-a-laser"><i class="fa fa-check"></i><b>4.2</b> Como Funciona a Máquina a Laser</a>
+<ul>
+<li class="chapter" data-level="4.2.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#estrutura-e-componentes-1"><i class="fa fa-check"></i><b>4.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#experiência-prática-projeto-da-caixa"><i class="fa fa-check"></i><b>4.3</b> Experiência Prática: Projeto da Caixa</a>
+<ul>
+<li class="chapter" data-level="4.3.1" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#buscando-o-projeto-1"><i class="fa fa-check"></i><b>4.3.1</b> Buscando o Projeto</a></li>
+<li class="chapter" data-level="4.3.2" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#preparação-do-arquivo-1"><i class="fa fa-check"></i><b>4.3.2</b> Preparação do Arquivo</a></li>
+<li class="chapter" data-level="4.3.3" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#processo-de-corte"><i class="fa fa-check"></i><b>4.3.3</b> Processo de Corte</a></li>
+<li class="chapter" data-level="4.3.4" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#montagem-da-caixa"><i class="fa fa-check"></i><b>4.3.4</b> Montagem da Caixa</a></li>
+<li class="chapter" data-level="4.3.5" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#resultado-final-1"><i class="fa fa-check"></i><b>4.3.5</b> Resultado Final</a></li>
+<li class="chapter" data-level="4.3.6" data-path="máquina-a-laser.html"><a href="máquina-a-laser.html#reflexão-sobre-o-processo-1"><i class="fa fa-check"></i><b>4.3.6</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="plotter.html"><a href="plotter.html"><i class="fa fa-check"></i><b>5</b> Plotter</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="plotter.html"><a href="plotter.html#o-que-é-uma-plotter"><i class="fa fa-check"></i><b>5.1</b> O Que é uma Plotter</a></li>
+<li class="chapter" data-level="5.2" data-path="plotter.html"><a href="plotter.html#como-funciona-a-plotter"><i class="fa fa-check"></i><b>5.2</b> Como Funciona a Plotter</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="plotter.html"><a href="plotter.html#estrutura-e-componentes-2"><i class="fa fa-check"></i><b>5.2.1</b> Estrutura e Componentes</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="plotter.html"><a href="plotter.html#experiência-prática-projeto-do-símbolo-targaryen"><i class="fa fa-check"></i><b>5.3</b> Experiência Prática: Projeto do Símbolo Targaryen</a>
+<ul>
+<li class="chapter" data-level="5.3.1" data-path="plotter.html"><a href="plotter.html#recebendo-as-instruções"><i class="fa fa-check"></i><b>5.3.1</b> Recebendo as Instruções</a></li>
+<li class="chapter" data-level="5.3.2" data-path="plotter.html"><a href="plotter.html#escolhendo-e-preparando-o-desenho"><i class="fa fa-check"></i><b>5.3.2</b> Escolhendo e Preparando o Desenho</a></li>
+<li class="chapter" data-level="5.3.3" data-path="plotter.html"><a href="plotter.html#processo-de-desenho"><i class="fa fa-check"></i><b>5.3.3</b> Processo de Desenho</a></li>
+<li class="chapter" data-level="5.3.4" data-path="plotter.html"><a href="plotter.html#resultado-final-2"><i class="fa fa-check"></i><b>5.3.4</b> Resultado Final</a></li>
+<li class="chapter" data-level="5.3.5" data-path="plotter.html"><a href="plotter.html#reflexão-sobre-o-processo-2"><i class="fa fa-check"></i><b>5.3.5</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="arduino.html"><a href="arduino.html"><i class="fa fa-check"></i><b>6</b> Arduino</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="arduino.html"><a href="arduino.html#o-que-é-o-arduino"><i class="fa fa-check"></i><b>6.1</b> O Que é o Arduino</a></li>
+<li class="chapter" data-level="6.2" data-path="arduino.html"><a href="arduino.html#para-que-serve-o-arduino"><i class="fa fa-check"></i><b>6.2</b> Para Que Serve o Arduino</a></li>
+<li class="chapter" data-level="6.3" data-path="arduino.html"><a href="arduino.html#programação-no-arduino"><i class="fa fa-check"></i><b>6.3</b> Programação no Arduino</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="arduino.html"><a href="arduino.html#estrutura-básica-de-um-programa-arduino"><i class="fa fa-check"></i><b>6.3.1</b> Estrutura Básica de um Programa Arduino</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="arduino.html"><a href="arduino.html#tipos-de-arduino"><i class="fa fa-check"></i><b>6.4</b> Tipos de Arduino</a></li>
+<li class="chapter" data-level="6.5" data-path="arduino.html"><a href="arduino.html#bancada-de-sistema-de-controle"><i class="fa fa-check"></i><b>6.5</b> Bancada de Sistema de Controle</a>
+<ul>
+<li class="chapter" data-level="6.5.1" data-path="arduino.html"><a href="arduino.html#apresentação-da-bancada"><i class="fa fa-check"></i><b>6.5.1</b> Apresentação da Bancada</a></li>
+<li class="chapter" data-level="6.5.2" data-path="arduino.html"><a href="arduino.html#explicação-da-bancada"><i class="fa fa-check"></i><b>6.5.2</b> Explicação da Bancada</a></li>
+<li class="chapter" data-level="6.5.3" data-path="arduino.html"><a href="arduino.html#foto-da-bancada"><i class="fa fa-check"></i><b>6.5.3</b> Foto da Bancada</a></li>
+<li class="chapter" data-level="6.5.4" data-path="arduino.html"><a href="arduino.html#reflexão-sobre-o-processo-3"><i class="fa fa-check"></i><b>6.5.4</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html"><i class="fa fa-check"></i><b>7</b> Processo de Corrosão</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#o-que-é-a-corrosão"><i class="fa fa-check"></i><b>7.1</b> O Que é a Corrosão</a></li>
+<li class="chapter" data-level="7.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#como-funciona-a-corrosão"><i class="fa fa-check"></i><b>7.2</b> Como Funciona a Corrosão</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#materiais-e-ferramentas"><i class="fa fa-check"></i><b>7.2.1</b> Materiais e Ferramentas</a></li>
+<li class="chapter" data-level="7.2.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#monitoramento-e-ajustes"><i class="fa fa-check"></i><b>7.2.2</b> Monitoramento e Ajustes</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#experiência-prática-fabricação-de-um-circuito"><i class="fa fa-check"></i><b>7.3</b> Experiência Prática: Fabricação de um Circuito</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#recebendo-as-instruções-1"><i class="fa fa-check"></i><b>7.3.1</b> Recebendo as Instruções</a></li>
+<li class="chapter" data-level="7.3.2" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#aplicando-a-máscara-e-realizando-a-corrosão"><i class="fa fa-check"></i><b>7.3.2</b> Aplicando a Máscara e Realizando a Corrosão</a></li>
+<li class="chapter" data-level="7.3.3" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#resultado-final-3"><i class="fa fa-check"></i><b>7.3.3</b> Resultado Final</a></li>
+<li class="chapter" data-level="7.3.4" data-path="processo-de-corrosão.html"><a href="processo-de-corrosão.html#reflexão-sobre-o-processo-4"><i class="fa fa-check"></i><b>7.3.4</b> Reflexão Sobre o Processo</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="soldagem.html"><a href="soldagem.html"><i class="fa fa-check"></i><b>8</b> Soldagem</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="soldagem.html"><a href="soldagem.html#o-processo-de-soldagem"><i class="fa fa-check"></i><b>8.1</b> O Processo de Soldagem</a></li>
+<li class="chapter" data-level="8.2" data-path="soldagem.html"><a href="soldagem.html#o-material-estanho"><i class="fa fa-check"></i><b>8.2</b> O Material: Estanho</a></li>
+<li class="chapter" data-level="8.3" data-path="soldagem.html"><a href="soldagem.html#a-estação-de-solda"><i class="fa fa-check"></i><b>8.3</b> A Estação de Solda</a></li>
+<li class="chapter" data-level="8.4" data-path="soldagem.html"><a href="soldagem.html#a-prática-de-soldagem"><i class="fa fa-check"></i><b>8.4</b> A Prática de Soldagem</a></li>
+<li class="chapter" data-level="8.5" data-path="soldagem.html"><a href="soldagem.html#reflexão-sobre-o-processo-5"><i class="fa fa-check"></i><b>8.5</b> 8.5 Reflexão Sobre o Processo</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="transmissor-am.html"><a href="transmissor-am.html"><i class="fa fa-check"></i><b>9</b> Transmissor AM</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="transmissor-am.html"><a href="transmissor-am.html#o-que-é-um-transmissor-am"><i class="fa fa-check"></i><b>9.1</b> O que é um Transmissor AM</a>
+<ul>
+<li class="chapter" data-level="9.1.1" data-path="transmissor-am.html"><a href="transmissor-am.html#princípios-de-funcionamento"><i class="fa fa-check"></i><b>9.1.1</b> Princípios de Funcionamento</a></li>
+<li class="chapter" data-level="9.1.2" data-path="transmissor-am.html"><a href="transmissor-am.html#vantagens-e-desvantagens"><i class="fa fa-check"></i><b>9.1.2</b> Vantagens e Desvantagens</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="transmissor-am.html"><a href="transmissor-am.html#descrição-do-projeto"><i class="fa fa-check"></i><b>9.2</b> Descrição do Projeto</a>
+<ul>
+<li class="chapter" data-level="9.2.1" data-path="transmissor-am.html"><a href="transmissor-am.html#componentes-e-materiais"><i class="fa fa-check"></i><b>9.2.1</b> Componentes e Materiais</a></li>
+<li class="chapter" data-level="9.2.2" data-path="transmissor-am.html"><a href="transmissor-am.html#objetivo-do-projeto"><i class="fa fa-check"></i><b>9.2.2</b> Objetivo do Projeto</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="transmissor-am.html"><a href="transmissor-am.html#cálculos-e-simulação"><i class="fa fa-check"></i><b>9.3</b> Cálculos e Simulação</a>
+<ul>
+<li class="chapter" data-level="9.3.1" data-path="transmissor-am.html"><a href="transmissor-am.html#cálculos-teóricos"><i class="fa fa-check"></i><b>9.3.1</b> Cálculos Teóricos</a></li>
+<li class="chapter" data-level="9.3.2" data-path="transmissor-am.html"><a href="transmissor-am.html#simulação-no-ltspice"><i class="fa fa-check"></i><b>9.3.2</b> Simulação no LTSpice</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="transmissor-am.html"><a href="transmissor-am.html#montagem-e-teste-em-protoboard"><i class="fa fa-check"></i><b>9.4</b> Montagem e Teste em Protoboard</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="transmissor-am.html"><a href="transmissor-am.html#montagem-na-protoboard"><i class="fa fa-check"></i><b>9.4.1</b> Montagem na Protoboard</a></li>
+<li class="chapter" data-level="9.4.2" data-path="transmissor-am.html"><a href="transmissor-am.html#testes-com-osciloscópio"><i class="fa fa-check"></i><b>9.4.2</b> Testes com Osciloscópio</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="transmissor-am.html"><a href="transmissor-am.html#produção-do-circuito-impresso"><i class="fa fa-check"></i><b>9.5</b> Produção do Circuito Impresso</a>
+<ul>
+<li class="chapter" data-level="9.5.1" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-carregar-o-arquivo-no-candle"><i class="fa fa-check"></i><b>9.5.1</b> 1º Passo: Carregar o Arquivo no Candle</a></li>
+<li class="chapter" data-level="9.5.2" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-medição-de-desnível-da-placa"><i class="fa fa-check"></i><b>9.5.2</b> 2º Passo: Medição de Desnível da Placa</a></li>
+<li class="chapter" data-level="9.5.3" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-fresagem-das-trilhas"><i class="fa fa-check"></i><b>9.5.3</b> 3º Passo: Fresagem das Trilhas</a></li>
+<li class="chapter" data-level="9.5.4" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-produção-dos-furos"><i class="fa fa-check"></i><b>9.5.4</b> 4º Passo: Produção dos Furos</a></li>
+<li class="chapter" data-level="9.5.5" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-criação"><i class="fa fa-check"></i><b>9.5.5</b> 5º Passo: Criação</a></li>
+<li class="chapter" data-level="9.5.6" data-path="transmissor-am.html"><a href="transmissor-am.html#º-passo-limpar-a-placa"><i class="fa fa-check"></i><b>9.5.6</b> 6º Passo: Limpar a placa</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="transmissor-am.html"><a href="transmissor-am.html#resultado-final-4"><i class="fa fa-check"></i><b>9.6</b> Resultado Final</a>
+<ul>
+<li class="chapter" data-level="9.6.1" data-path="transmissor-am.html"><a href="transmissor-am.html#foto-do-circuito-finalizado"><i class="fa fa-check"></i><b>9.6.1</b> Foto do Circuito Finalizado</a></li>
+<li class="chapter" data-level="9.6.2" data-path="transmissor-am.html"><a href="transmissor-am.html#visualização-do-sinal-no-osciloscópio"><i class="fa fa-check"></i><b>9.6.2</b> Visualização do Sinal no Osciloscópio</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="transmissor-am.html"><a href="transmissor-am.html#impacto-no-desenvolvimento-profissional"><i class="fa fa-check"></i><b>9.7</b> Impacto no Desenvolvimento Profissional</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Fabricação Digital</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="impressão-3d" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Impressão 3D<a href="impressão-3d.html#impressão-3d" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="o-que-é-impressora-3d" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> O Que é Impressora 3D<a href="impressão-3d.html#o-que-é-impressora-3d" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A impressora 3D é uma tecnologia revolucionária que permite a criação de objetos tridimensionais a partir de modelos digitais. Utilizando processos aditivos, a impressora constrói camadas sucessivas de material até formar o objeto desejado. Esta tecnologia tem inúmeras aplicações, desde prototipagem rápida até produção em pequena escala e fabricação personalizada.</p>
+<p>A impressão 3D começou a ganhar destaque nas últimas décadas, transformando a maneira como os produtos são projetados, desenvolvidos e fabricados. A capacidade de criar formas complexas com precisão e eficiência tem feito da impressão 3D uma ferramenta indispensável em várias indústrias. As impressoras 3D são amplamente utilizadas em setores como automotivo, aeroespacial, médico, arquitetura e design de produtos, devido à sua versatilidade e ao seu potencial para inovação.</p>
+<p>No setor automotivo, a impressão 3D é utilizada para criar protótipos de peças e componentes, permitindo que engenheiros e designers testem novas ideias de forma rápida e econômica. Além disso, a tecnologia possibilita a produção de peças personalizadas para veículos antigos ou de edição limitada, onde a fabricação tradicional seria inviável ou muito cara.</p>
+<p>Na indústria aeroespacial, a impressão 3D tem sido uma verdadeira revolução. Componentes leves e complexos, que antes eram impossíveis de fabricar com métodos convencionais, agora podem ser produzidos com precisão. Isso resulta em aeronaves mais eficientes em termos de combustível e desempenho, além de permitir a produção de peças sob demanda, o que é crucial para a manutenção e reparo de aeronaves.</p>
+<p>A área médica também tem se beneficiado enormemente da impressão 3D. Modelos anatômicos personalizados, baseados em imagens de ressonância magnética ou tomografia computadorizada, permitem que cirurgiões planejem e pratiquem procedimentos complexos antes de operarem no paciente real. Próteses e órteses personalizadas, ajustadas às necessidades específicas dos pacientes, têm melhorado significativamente a qualidade de vida de muitas pessoas. Além disso, a bioprinting, um ramo da impressão 3D, está explorando a possibilidade de imprimir tecidos humanos e, eventualmente, órgãos para transplante.</p>
+<p>Na arquitetura, a impressão 3D é utilizada para criar maquetes detalhadas e protótipos de edifícios e estruturas. Isso permite que arquitetos e engenheiros visualizem e ajustem seus projetos antes da construção real. A tecnologia também está sendo explorada para a construção de habitações, com impressoras 3D de grande escala capazes de imprimir partes de edifícios em concreto, acelerando o processo de construção e reduzindo os custos.</p>
+<p>No design de produtos, a impressão 3D permite uma liberdade criativa sem precedentes. Designers podem criar formas complexas e intrincadas que seriam impossíveis de fabricar com métodos tradicionais. A capacidade de produzir protótipos rapidamente permite um ciclo de desenvolvimento ágil, onde os designs podem ser testados e refinados de forma iterativa. Além disso, a fabricação personalizada possibilita a criação de produtos únicos, feitos sob medida para as preferências dos consumidores.</p>
+<p>A impressão 3D também está encontrando aplicações em áreas como moda, onde designers estão experimentando com roupas e acessórios impressos em 3D, e na culinária, onde chefs estão utilizando impressoras 3D para criar pratos inovadores e artisticamente complexos. A tecnologia tem o potencial de transformar praticamente qualquer setor, oferecendo novas possibilidades e oportunidades de inovação.</p>
+<p>Além das aplicações industriais e comerciais, a impressão 3D também tem um impacto significativo no mercado consumidor. Impressoras 3D domésticas estão se tornando mais acessíveis e fáceis de usar, permitindo que hobistas, makers e entusiastas da tecnologia criem seus próprios objetos personalizados em casa. Desde brinquedos e ferramentas até peças de reposição e acessórios personalizados, as possibilidades são praticamente ilimitadas.</p>
+<p>A sustentabilidade é outra área onde a impressão 3D está mostrando seu potencial. A capacidade de fabricar peças sob demanda reduz a necessidade de grandes estoques e diminui o desperdício de material. Além disso, muitos fabricantes de impressoras 3D estão desenvolvendo materiais de impressão mais ecológicos, incluindo plásticos biodegradáveis e reciclados.</p>
+<p>A impressão 3D não é apenas uma tecnologia de fabricação, mas uma plataforma para inovação e criatividade. À medida que a tecnologia continua a evoluir, novas possibilidades e aplicações estão surgindo, prometendo transformar ainda mais a maneira como projetamos e fabricamos produtos. Com seu impacto já evidente em diversas indústrias, a impressão 3D está bem posicionada para continuar a liderar a próxima revolução industrial.</p>
+</div>
+<div id="como-funciona-a-impressora-3d" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Como Funciona a Impressora 3D<a href="impressão-3d.html#como-funciona-a-impressora-3d" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="estrutura-e-componentes" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Estrutura e Componentes<a href="impressão-3d.html#estrutura-e-componentes" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A estrutura de uma impressora 3D é composta por vários componentes principais que trabalham juntos para criar objetos tridimensionais. Entre esses componentes estão os eixos, os fins de curso, o bico de impressão e o material utilizado, como o PLA.</p>
+<div id="eixos" class="section level4 hasAnchor" number="3.2.1.1">
+<h4><span class="header-section-number">3.2.1.1</span> Eixos<a href="impressão-3d.html#eixos" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Os eixos são fundamentais para o movimento da impressora 3D. Normalmente, uma impressora 3D possui três eixos principais:</p>
+<ul>
+<li><strong>Eixo X</strong>: Responsável pelo movimento lateral (esquerda e direita).</li>
+<li><strong>Eixo Y</strong>: Responsável pelo movimento frontal e traseiro (para frente e para trás).</li>
+<li><strong>Eixo Z</strong>: Responsável pelo movimento vertical (para cima e para baixo).</li>
+</ul>
+<p>Esses eixos trabalham em conjunto para posicionar o bico de impressão na localização correta para depositar o material de forma precisa.</p>
+</div>
+<div id="fins-de-curso" class="section level4 hasAnchor" number="3.2.1.2">
+<h4><span class="header-section-number">3.2.1.2</span> Fins de Curso<a href="impressão-3d.html#fins-de-curso" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>Os fins de curso são sensores instalados nas extremidades dos eixos que determinam os limites de movimento da impressora. Eles garantem que o bico de impressão não ultrapasse os limites físicos da área de impressão, evitando danos à máquina e garantindo precisão.</p>
+</div>
+<div id="bico-de-impressão" class="section level4 hasAnchor" number="3.2.1.3">
+<h4><span class="header-section-number">3.2.1.3</span> Bico de Impressão<a href="impressão-3d.html#bico-de-impressão" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>O bico de impressão, também conhecido como extrusor, é o componente que funde e deposita o material de impressão camada por camada. O bico aquece o material (neste caso, o PLA) até que ele se torne maleável, permitindo que seja extrudido com precisão na superfície de impressão.</p>
+</div>
+<div id="material-utilizado-pla" class="section level4 hasAnchor" number="3.2.1.4">
+<h4><span class="header-section-number">3.2.1.4</span> Material Utilizado: PLA<a href="impressão-3d.html#material-utilizado-pla" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>O PLA (Ácido Polilático) é um dos materiais mais comuns utilizados na impressão 3D. É um polímero biodegradável derivado de recursos naturais como o milho e a cana-de-açúcar. O PLA é amplamente utilizado devido à sua facilidade de uso, boa qualidade de impressão e menor tendência a deformações, tornando-o ideal para uma ampla gama de aplicações.</p>
+</div>
+</div>
+</div>
+<div id="experiência-prática-projeto-do-dragão-de-game-of-thrones" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Experiência Prática: Projeto do Dragão de Game of Thrones<a href="impressão-3d.html#experiência-prática-projeto-do-dragão-de-game-of-thrones" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Durante o treinamento prático de impressão 3D, realizei um projeto que envolveu a impressão de um modelo de um dragão inspirado na série Game of Thrones. A experiência foi enriquecedora e proporcionou uma compreensão profunda do processo de impressão 3D. Abaixo, descreverei detalhadamente cada etapa do processo.</p>
+<div id="buscando-o-projeto" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Buscando o Projeto<a href="impressão-3d.html#buscando-o-projeto" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>O primeiro passo foi buscar um modelo tridimensional do dragão na internet. Encontrei um arquivo STL detalhado e bem projetado, ideal para a impressão 3D. Como representado abaixo, o modelo apresentava características complexas, com detalhes intricados nas asas, escamas e garras do dragão.</p>
+<p><img src="targaryen.png" style="display:block; margin:0 auto;;width:50.0%" /></p>
+<center>
+Projeto para impressão.
+</center>
+</div>
+<div id="preparação-do-arquivo" class="section level3 hasAnchor" number="3.3.2">
+<h3><span class="header-section-number">3.3.2</span> Preparação do Arquivo<a href="impressão-3d.html#preparação-do-arquivo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Após encontrar o modelo, importei o arquivo para um software de fatiamento, que converte o modelo tridimensional em camadas, gerando um G-Code que a impressora 3D pode entender. Ajustei os parâmetros de impressão, como a temperatura do bico (ajustada para 200°C para o PLA), a temperatura da mesa de impressão (60°C) e a densidade do preenchimento interno.</p>
+</div>
+<div id="processo-de-impressão" class="section level3 hasAnchor" number="3.3.3">
+<h3><span class="header-section-number">3.3.3</span> Processo de Impressão<a href="impressão-3d.html#processo-de-impressão" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Com o G-Code preparado, iniciei a impressão. A impressora 3D começou a trabalhar camada por camada, construindo gradualmente o dragão. Durante a impressão, acompanhei o progresso e fiz ajustes finos conforme necessário para garantir que a qualidade permanecesse alta. Abaixo, uma foto do momento em que a impressão estava em andamento.</p>
+<img src="Impress%C3%A3o_final.jpg" style="display:block; margin:0 auto;;width:50.0%" />
+<center>
+Processo da impressão.
+</center>
+</div>
+<div id="resultado-final" class="section level3 hasAnchor" number="3.3.4">
+<h3><span class="header-section-number">3.3.4</span> Resultado Final<a href="impressão-3d.html#resultado-final" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Após várias horas de impressão, o dragão foi concluído com sucesso. O modelo final apresentava uma excelente definição de detalhes, com as escamas e asas claramente delineadas. A experiência de ver o projeto ganhando forma camada por camada foi extremamente gratificante. Abaixo, uma foto do resultado final.</p>
+<img src="Impress%C3%A3o_resultado.jpg" style="display:block; margin:0 auto;;width:50.0%" />
+<center>
+Resultado final da impressão.
+</center>
+</div>
+<div id="reflexão-sobre-o-processo" class="section level3 hasAnchor" number="3.3.5">
+<h3><span class="header-section-number">3.3.5</span> Reflexão Sobre o Processo<a href="impressão-3d.html#reflexão-sobre-o-processo" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Durante o processo de impressão, enfrentei alguns desafios, como pequenos ajustes na temperatura do bico e na velocidade de impressão para evitar imperfeições. A experiência prática foi essencial para entender as nuances da impressão 3D e como cada parâmetro pode afetar o resultado final. Este projeto não só aprimorou minhas habilidades técnicas, mas também aumentou minha apreciação pelas possibilidades da fabricação digital.</p>
+<p>A impressão 3D é uma tecnologia fascinante que oferece inúmeras possibilidades de criação e inovação. Desde a concepção do projeto até a finalização da impressão, cada etapa do processo proporciona uma oportunidade única de aprendizado e desenvolvimento.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="máquinas-cnc.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="máquina-a-laser.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-impres3d.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
